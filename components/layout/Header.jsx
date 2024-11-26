@@ -28,14 +28,14 @@ const menu = [
 const Navbar = () => {
   return (
     <header className="z-50 w-full h-20 p-4">
-      <Container className={"backdrop-blur-xl bg-black/40 h-[70px] rounded-xl flex items-center"}>
+      <Container className={"backdrop-blur-xl bg-background/60 h-[70px] rounded-xl flex items-center"}>
         <div className="w-full flex items-center justify-between px-8">
           <Link href="/" className="flex items-center gap-4 -ml-16 hover:scale-110 duration-300">
             <Image src="/255-logo.svg" alt="logo" width={80} height={80} className="drop-shadow-lg" />
             <h1 className="text-xl font-bold">255 Agency</h1>
           </Link>
           <nav>
-            <ul className="flex gap-8">
+            <ul className="gap-8 hidden md:flex">
               {menu.map((item) => (
                 <li key={item.name}>
                   <Link href={item.href}>
