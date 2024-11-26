@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Container from "./Container";
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 
 const menu = [
   {
@@ -61,6 +62,7 @@ const Navbar = () => {
             </ul>
           </nav>
         </div>
+        <MobileMenu />
       </Container>
     </header>
   );
