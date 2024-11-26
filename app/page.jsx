@@ -1,11 +1,7 @@
-import dynamic from "next/dynamic";
-
-const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
-
 export default function Home() {
   return (
-    <main className="h-screen">
-      <Scene />
-    </main>
+    <section className="z-50 bg-orange-500/20 w-full flex flex-col justify-center">
+      
+    </section>
   );
 }
