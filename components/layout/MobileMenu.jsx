@@ -45,9 +45,9 @@ const MobileMenu = () => {
           ></div>
         )}
         <div
-          className={`absolute top-[80px] z-50 w-5/6 opacity-[${
-            isMenuOpen ? "100" : "0"
-          }] duration-200 right-0 h-[85svh] bg-background rounded-xl`}
+          className={`absolute top-[80px] z-50 w-5/6 ${
+            isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          } duration-200 right-0 h-[85svh] bg-background rounded-xl`}
         >
           <nav>
             <ul className="flex flex-col items-center gap-8 py-16">
