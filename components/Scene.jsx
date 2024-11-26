@@ -18,7 +18,7 @@ export default function Scene() {
       <CameraControls minPolarAngle={0} maxPolarAngle={Math.PI / 2.9} maxDistance={20} minDistance={5} />
 
       <Suspense fallback={<Loader />}>
-        <Sparkles count={2000} scale={15} size={6} speed={0.2} />
+        <Sparkles count={2000} scale={15} size={6} speed={0.2} color={"#fc7c3b"} />
         <Model />
       </Suspense>
     </Canvas>
