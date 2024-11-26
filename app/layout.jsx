@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className + "relative w-full flex justify-center"}>
         <Header />
-        <main className="absolute z-10 w-full max-w-screen-lg mt-32">{children}</main>
+        <main className="absolute z-10 w-full max-w-screen-xl">{children}</main>
         <div className="h-screen fixed w-full top-0">
           <Scene />
         </div>
