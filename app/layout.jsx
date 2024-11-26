@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
 import "./globals.css";
-import { Html } from "@react-three/drei";
 import Header from "@/components/layout/Header";
 
 const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
@@ -16,6 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/255-logo.svg" />
+      </head>
       <body className={inter.className + "relative w-full flex justify-center"}>
         <Header />
         <main className="absolute z-10 w-full max-w-screen-lg mt-32">{children}</main>
