@@ -44,7 +44,7 @@ const Navbar = () => {
               alt="logo"
               width={80}
               height={80}
-              className="drop-shadow-lg"
+              className="drop-shadow-lg size-[80px]"
             />
             <h1 className="text-xl font-bold drop-shadow-lg">255 Agency</h1>
           </Link>
