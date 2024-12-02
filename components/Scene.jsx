@@ -42,8 +42,6 @@ export default function Scene() {
         position: camPosition,
         fov: 25,
       }}
-      dpr={[1, 1.5]}
-      scale={[2]}
       className="relative h-svh"
     >
       <directionalLight position={[30, 20, 5]} intensity={5} />
