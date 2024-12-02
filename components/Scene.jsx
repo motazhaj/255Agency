@@ -2,8 +2,8 @@
 
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
-import { Suspense } from "react";
-import { useProgress, Html, CameraControls, Sparkles } from "@react-three/drei";
+import { Suspense, useRef, useState } from "react";
+import { useProgress, Html, Sparkles, OrbitControls } from "@react-three/drei";
 
 export default function Scene() {
   const scalingFactor = window.innerWidth / 1300;
@@ -21,9 +21,22 @@ export default function Scene() {
   };
 
   const camPosition = computeCamPosition();
+  const controlsRef = useRef();
+  const [isAutoRotate, setAutoRotate] = useState(true);
+  const delayTime = 2000; // Delay in milliseconds
+  let timer = useRef();
+
+  const handleStart = () => {
+    setAutoRotate(false); // Disable auto-rotate when interacting
+    if (timer.current) clearTimeout(timer.current); // Clear any existing timers
+  };
+
+  const handleEnd = () => {
+    timer.current = setTimeout(() => setAutoRotate(true), delayTime); // Re-enable auto-rotate after delay
+  };
+
   return (
     <Canvas
-      onClick={() => console.log(".")}
       gl={{ antialias: true }}
       camera={{
         position: camPosition,
@@ -35,15 +48,18 @@ export default function Scene() {
     >
       <directionalLight position={[30, 20, 5]} intensity={5} />
       <ambientLight intensity={1} />
-      <CameraControls
+      <OrbitControls
+        ref={controlsRef}
+        autoRotate={isAutoRotate}
+        onStart={handleStart}
+        onEnd={handleEnd}
+        autoRotateSpeed={0.5}
         minPolarAngle={0}
         maxPolarAngle={Math.PI / 2.9}
-        maxDistance={30}
-        minDistance={5}
       />
 
       <Suspense fallback={<Loader />}>
-        <Sparkles count={2000} scale={15} size={6} speed={0.2} color={"#feb470"} />
+        <Sparkles count={1000} scale={15} size={10} speed={0.5} color={"#fff"} />
         <Model />
       </Suspense>
     </Canvas>
@@ -65,7 +81,7 @@ function Loader() {
 function Annotation({ children, ...props }) {
   return (
     <Html {...props} transform occlude="blending">
-      <div className="annotation" onClick={() => console.log(".")}>
+      <div className="annotation" onClick={() => console.log("Annotation clicked")}>
         {children}
       </div>
     </Html>
