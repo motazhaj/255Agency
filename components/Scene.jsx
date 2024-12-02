@@ -23,7 +23,7 @@ export default function Scene() {
   const camPosition = computeCamPosition();
   const controlsRef = useRef();
   const [isAutoRotate, setAutoRotate] = useState(true);
-  const delayTime = 2000; // Delay in milliseconds
+  const delayTime = 10000; // Delay in milliseconds
   let timer = useRef();
 
   const handleStart = () => {
