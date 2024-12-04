@@ -30,6 +30,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  min-height: 100vh;
+  min-height: 150vh;
   font-family: Helvetica, Arial, sans-serif;
 }
