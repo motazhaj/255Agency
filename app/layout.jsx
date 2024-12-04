@@ -3,6 +3,8 @@ import dynamic from "next/dynamic";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Container from "@/components/layout/Container";
+import Footer from "@/components/layout/Footer";
+import ScrollToBottomButton from "@/components/layout/ScrollToBottom";
 
 const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
 
@@ -19,12 +21,12 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/255-logo.svg" />
       </head>
-      <body className={inter.className + "relative w-full flex justify-center"}>
+      <body className={inter.className + "relative w-full flex flex-col justify-between"}>
         <Header />
-
-        <main className="absolute z-10 w-full max-w-screen-2xl">
+        <main className="z-10 w-full max-w-screen-2xl">
           <Container>{children}</Container>
         </main>
+        <Footer />
         <div className="h-screen fixed w-full top-0">
           <Scene />
         </div>
