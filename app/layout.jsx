@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className + "relative w-full flex flex-col justify-between"}>
         <Header />
-        <main className="z-10 w-full max-w-screen-2xl">
+        <main className="z-10 w-full max-w-screen-2xl mx-auto">
           <Container>{children}</Container>
         </main>
         <Footer />
