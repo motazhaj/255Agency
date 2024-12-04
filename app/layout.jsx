@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import Container from "@/components/layout/Container";
 
 const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
 
@@ -20,7 +21,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className + "relative w-full flex justify-center"}>
         <Header />
-        <main className="absolute z-10 w-full max-w-screen-xl">{children}</main>
+
+        <main className="absolute z-10 w-full max-w-screen-2xl">
+          <Container>{children}</Container>
+        </main>
         <div className="h-screen fixed w-full top-0">
           <Scene />
         </div>

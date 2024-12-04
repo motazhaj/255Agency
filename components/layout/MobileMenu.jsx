@@ -17,7 +17,7 @@ const MobileMenu = () => {
   return (
     <>
       <button
-        className="text-primary focus:outline-none md:hidden mr-4"
+        className="text-primary focus:outline-none md:hidden mr-10"
         onClick={() => setIsMenuOpen((prev) => !prev)}
       >
         <svg
