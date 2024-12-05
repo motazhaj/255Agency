@@ -20,7 +20,18 @@ export default function Scene() {
     }
   };
 
+  const computeFog = () => {
+    if (scalingFactor < 0.5) {
+      return [25];
+    } else if (scalingFactor < 0.8) {
+      return [20];
+    } else {
+      return [15];
+    }
+  };
+
   const camPosition = computeCamPosition();
+  const fogNear = computeFog();
   const controlsRef = useRef();
   const [isAutoRotate, setAutoRotate] = useState(true);
   const delayTime = 10000; // Delay in milliseconds
@@ -44,6 +55,13 @@ export default function Scene() {
       }}
       className="relative h-svh"
     >
+      <fog
+        attach="fog"
+        color={"#ff5100"}
+        near={fogNear}
+        far={fogNear * 2}
+        density={0.4}
+      />
       <directionalLight position={[30, 20, 5]} intensity={5} />
       <ambientLight intensity={1} />
       <OrbitControls
@@ -51,9 +69,11 @@ export default function Scene() {
         autoRotate={isAutoRotate}
         onStart={handleStart}
         onEnd={handleEnd}
-        autoRotateSpeed={0.5}
+        autoRotateSpeed={0.4}
+        enablePan={false}
+        enableZoom={false}
         minPolarAngle={0}
-        maxPolarAngle={Math.PI / 2.9}
+        maxPolarAngle={Math.PI / 2.3}
       />
 
       <Suspense fallback={<Loader />}>
@@ -69,7 +89,7 @@ function Loader() {
 
   return (
     <Html center>
-      <h2 className="text-4xl font-bold w-[300px] text-center text-primary">
+      <h2 className="text-4xl font-bold w-[300px] text-center text-background">
         Entering 255! {progress.toFixed(1)}%
       </h2>
     </Html>
