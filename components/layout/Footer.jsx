@@ -9,8 +9,8 @@ const Footer = () => {
     <footer className="w-full z-10 py-4">
       <Container className="flex">
         <div className="bg-primary/60 p-12 backdrop-blur-xl rounded-[40px] min-h-[200px]">
-          <div className="w-full flex items-center justify-between">
-            <div className="w-2/3 h-full flex flex-col gap-8 justify-start">
+          <div className="w-full flex items-start justify-between">
+            <div className="w-2/3 h-full flex flex-col gap-4 justify-start">
               <Link
                 href="/"
                 className="flex items-center gap-1 w-fit hover:scale-110 duration-300"
@@ -30,8 +30,8 @@ const Footer = () => {
                 incidunt sapiente beatae ab numquam in, velit dolores officia illo omnis.
               </p>
             </div>
-            <nav className="w-1/3 ml-32">
-              <ul className="gap-8 flex flex-col">
+            <nav className="w-1/3 ml-4 lg:ml-32">
+              <ul className="gap-4 flex flex-col">
                 {navMenu.map((item) => (
                   <li key={item.name}>
                     <Link href={item.href}>
