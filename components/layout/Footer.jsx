@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="w-full z-10 py-4">
       <Container className="flex">
-        <div className="bg-primary/60 p-12 backdrop-blur-xl rounded-[40px] min-h-[200px]">
+        <div className="bg-primary p-12 backdrop-blur-xl rounded-[40px] min-h-[200px]">
           <div className="w-full flex items-start justify-between">
             <div className="w-2/3 h-full flex flex-col gap-4 justify-start">
               <Link
