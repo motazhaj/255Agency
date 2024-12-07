@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/255-logo.svg" />
       </head>
-      <body className={inter.className + "relative w-full flex flex-col justify-between"}>
+      <body className={inter.className + "relative w-full flex flex-col justify-between min-h-[160vh] md:min-h-[145vh]"}>
         <Header />
         <main className="z-10 w-full max-w-screen-2xl mx-auto">
           <Container>{children}</Container>
