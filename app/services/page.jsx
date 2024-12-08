@@ -4,38 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import ServiceCard from "@/components/services/ServiceCard";
 import React from "react";
 
-const services = [
-  {
-    title: "Graphic Design",
-    description: "Develop a compelling brand identity that resonates with your audience.",
-    image: "https://placehold.co/600x400",
-    link: "/services/design",
-  },
-  {
-    title: "Marketing",
-    description: "Develop a compelling brand identity that resonates with your audience.",
-    image: "https://placehold.co/600x400",
-    link: "/services/design",
-  },
-  {
-    title: "Web Development",
-    description: "Develop a compelling brand identity that resonates with your audience.",
-    image: "https://placehold.co/600x400",
-    link: "/services/design",
-  },
-  {
-    title: "Graphic Design",
-    description: "Develop a compelling brand identity that resonates with your audience.",
-    image: "https://placehold.co/600x400",
-    link: "/services/design",
-  },
-  {
-    title: "Graphic Design",
-    description: "Develop a compelling brand identity that resonates with your audience.",
-    image: "https://placehold.co/600x400",
-    link: "/services/design",
-  },
-];
+import { servicesData } from "@/data/servicesData";
 
 const page = () => {
   return (
@@ -46,7 +15,7 @@ const page = () => {
       />
 
       <ul className="flex flex-col gap-8 w-full">
-        {services.map((service, index) => (
+        {servicesData.map((service, index) => (
           <ServiceCard {...service} key={index} />
         ))}
       </ul>
