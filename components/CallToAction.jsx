@@ -8,7 +8,7 @@ import FadeInBottom from "./animations/FadeInBottom";
 
 const CallToAction = () => {
   return (
-    <Container className="mb-32 flex flex-col text-center items-center gap-8">
+    <Container className="my-24 flex flex-col text-center items-center gap-8">
       <FadeInRight>
         <p className="leading-relaxed max-w-[600px]">
           Ready to empower your brand and inspire change? Contact us today, and let us create
