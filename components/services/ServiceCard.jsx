@@ -9,17 +9,17 @@ const ServiceCard = ({ title, description, image, slug }) => {
       className="group w-full mx-auto bg-foreground rounded-3xl overflow-hidden shadow-2xl transition-transform transform hover:scale-105 hover:shadow-2xl duration-500 ease-in-out"
     >
       <div className="flex flex-col md:flex-row items-center gap-8 p-6">
-        <div className="w-1/2 relative overflow-hidden rounded-xl">
+        <div className="md:w-1/2 h-full relative overflow-hidden rounded-xl">
           <img
             src={image}
             alt={title}
-            className="object-cover transform transition duration-500 ease-in-out group-hover:scale-125"
+            className="object-cover w-full transform transition duration-500 ease-in-out group-hover:scale-125"
           />
 
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary opacity-40 group-hover:opacity-70 transition-opacity duration-500" />
         </div>
 
-        <div className="flex flex-col gap-4 w-1/2">
+        <div className="flex flex-col gap-4 md:w-1/2">
           <h3 className="text-3xl font-semibold text-primary leading-tight transform transition-all duration-500 group-hover:translate-y-[-10px]">
             {title}
           </h3>
