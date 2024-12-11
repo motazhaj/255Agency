@@ -8,7 +8,7 @@ import { servicesData } from "@/data/servicesData";
 
 const page = () => {
   return (
-    <PageOverlayed title="Services" image="https://placehold.co/600x400">
+    <PageOverlayed title="Services" image="https://placehold.co/1600x200">
       <PageHeader
         text="Our Services!"
         subtext="At 255, we help businesses grow by providing top-notch advertising solutions. Here's a glimpse of what we offer:"
