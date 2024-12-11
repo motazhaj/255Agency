@@ -49,7 +49,7 @@ const ContactPage = () => {
               Your success is our passion. Let's create unforgettable campaigns, remarkable
               experiences, and lasting partnerships. Reach out today and let's make it happen!
             </p>
-            <div className="flex gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a href="mailto:connect@agency.com">
                 <button className="px-8 py-4 text-xl font-bold bg-background text-primary rounded-lg shadow-md transform transition hover:scale-105">
                   info@255.com
@@ -64,11 +64,11 @@ const ContactPage = () => {
           </div>
         </section>
         <section className="bg-background text-foreground">
-          <div className="flex justify-start gap-8">
+          <div className="flex flex-col lg:flex-row justify-start gap-8">
             {locations.map((location, index) => (
               <div
                 key={index}
-                className="w-1/3 bg-foreground text-background rounded-2xl p-8 flex flex-col gap-4"
+                className="lg:w-1/3 bg-foreground text-background rounded-2xl p-8 flex flex-col gap-4"
               >
                 <h2 className="text-4xl font-bold text-primary">{location.name}</h2>
                 <p className="text-xl opacity-80">{location.address}</p>
@@ -89,8 +89,8 @@ const ContactPage = () => {
         </section>
 
         {/* Map Section */}
-        <section className="p-8 bg-gradient-to-t rounded-2xl from-primary to-orange-500 text-background">
-          <div className="text-center">
+        <section className="p-2 md:p-8 bg-gradient-to-t rounded-2xl from-primary to-orange-500 text-background">
+          <div className="text-center pt-8">
             <h2 className="text-4xl font-bold text-background">Find Us Here</h2>
             <p className="mt-4 text-xl text-semibold text-back ground">
               Our main headquarters is located in, Saad Eddin Building, 2nd Floor, Al-Basateen,
@@ -99,7 +99,7 @@ const ContactPage = () => {
 
             <div className="mt-8">
               <iframe
-                className="w-full h-[600px] rounded-2xl shadow-lg transform transition"
+                className="w-full h-[400px] md:h-[600px] rounded-2xl shadow-lg transform transition"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4773.4046173905535!2d35.255517961995544!3d32.222905400086574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ce1b1af5cb07d%3A0x8393738a2be6be73!2s255%20Advertising%20Agancy!5e0!3m2!1sen!2s!4v1733662054166!5m2!1sen!2s"
                 allowFullScreen=""
                 loading="lazy"
