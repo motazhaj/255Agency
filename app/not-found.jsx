@@ -1,13 +1,20 @@
-import Container from "@/components/layout/Container";
+import LinkButtonFill from "@/components/buttons/LinkButtonFill";
+import PageOverlayed from "@/components/layout/PageOverlayed";
+import PageHeader from "@/components/PageHeader";
 import React from "react";
 
 const NotFound = () => {
   return (
-    <Container>
-      <section className="bg-background/60 backdrop-blur-lg w-full h-[400px] rounded-xl flex justify-center items-center mt-24">
-        <h2 className="text-2xl font-bold text-primary px-4">404: Page Not Found</h2>
-      </section>
-    </Container>
+    <PageOverlayed title="404" image="https://placehold.co/1600x200">
+      <PageHeader
+        text="Page not found"
+        subtext="it seems that you have entered an invalid URL"
+        className="text-primary font-extrabold text-4xl sm:text-5xl lg:text-6xl"
+      />
+      <div className="mt-[100px] max-w-[200px] mx-auto">
+        <LinkButtonFill href="/">Back to Home</LinkButtonFill>
+      </div>
+    </PageOverlayed>
   );
 };
 
