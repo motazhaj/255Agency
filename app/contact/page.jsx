@@ -43,11 +43,13 @@ const ContactPage = () => {
         <section className="p-8 rounded-2xl bg-gradient-to-t from-primary to-orange-500 text-background text-center">
           <div className="flex flex-col gap-8">
             <h2 className="text-5xl font-bold">
-              Let's Build Something <span className="text-foreground">Amazing</span> Together
+              Let's Build Something <span className="text-foreground">Amazing</span>{" "}
+              Together
             </h2>
             <p className="text-xl opacity-90">
-              Your success is our passion. Let's create unforgettable campaigns, remarkable
-              experiences, and lasting partnerships. Reach out today and let's make it happen!
+              Your success is our passion. Let's create unforgettable campaigns,
+              remarkable experiences, and lasting partnerships. Reach out today and let's
+              make it happen!
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a href="mailto:connect@agency.com">
@@ -63,7 +65,7 @@ const ContactPage = () => {
             </div>
           </div>
         </section>
-        <section className="bg-background text-foreground">
+        <section className="text-foreground">
           <div className="flex flex-col lg:flex-row justify-start gap-8">
             {locations.map((location, index) => (
               <div
@@ -93,8 +95,8 @@ const ContactPage = () => {
           <div className="text-center pt-8">
             <h2 className="text-4xl font-bold text-background">Find Us Here</h2>
             <p className="mt-4 text-xl text-semibold text-back ground">
-              Our main headquarters is located in, Saad Eddin Building, 2nd Floor, Al-Basateen,
-              Nablus
+              Our main headquarters is located in, Saad Eddin Building, 2nd Floor,
+              Al-Basateen, Nablus
             </p>
 
             <div className="mt-8">

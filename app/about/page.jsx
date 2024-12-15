@@ -40,7 +40,7 @@ const team = [
 const page = () => {
   return (
     <PageOverlayed title="About Us" image="https://placehold.co/1600x200">
-      <div className="flex flex-col gap-8 bg-background text-foreground">
+      <div className="flex flex-col gap-8 text-foreground">
         <PageHeader
           text="Who are we?"
           subtext="Discover the heart of our agency and our commitment to making your brand stand out."
