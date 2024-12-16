@@ -62,8 +62,8 @@ export default function Scene() {
         far={fogNear * 2}
         density={0.4}
       />
-      <directionalLight position={[30, 20, 5]} intensity={5} />
-      <ambientLight intensity={1} />
+      <directionalLight position={[30, 20, 5]} intensity={4} />
+      <ambientLight intensity={0.5} />
       <OrbitControls
         ref={controlsRef}
         autoRotate={isAutoRotate}
@@ -71,7 +71,8 @@ export default function Scene() {
         onEnd={handleEnd}
         autoRotateSpeed={0.4}
         enablePan={false}
-        enableZoom={false}
+        minDistance={8}
+        maxDistance={25}
         minPolarAngle={0}
         maxPolarAngle={Math.PI / 2.3}
       />
