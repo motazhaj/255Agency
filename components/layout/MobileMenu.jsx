@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const menu = [
   { name: "Home", href: "/" },
@@ -17,7 +19,7 @@ const MobileMenu = () => {
   return (
     <>
       <button
-        className="text-primary focus:outline-none md:hidden mr-10"
+        className="text-primary bg-foreground hover:bg-secondary duration-300 drop-shadow-xl rounded-full size-16 flex justify-center items-center focus:outline-none"
         onClick={() => setIsMenuOpen((prev) => !prev)}
       >
         <svg
@@ -31,7 +33,7 @@ const MobileMenu = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+            d="M4 6h16M4 12h16M4 18h16"
           />
         </svg>
       </button>
@@ -44,28 +46,53 @@ const MobileMenu = () => {
             onClick={() => setIsMenuOpen(false)}
           ></div>
         )}
-        <div
-          className={`absolute top-[80px] z-50 w-5/6 ${
-            isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          } duration-200 right-0 h-[85svh] bg-background rounded-xl`}
+        <motion.div
+          className="absolute top-0 z-50 w-5/6 right-0 max-w-screen-sm h-[100svh] bg-background"
+          initial={{ x: "100%" }}
+          animate={isMenuOpen ? { x: 0 } : { x: "100%" }}
+          exit={{ x: "100%" }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
         >
+          <div className="flex w-[90%] justify-between items-center m-[5%] pb-8 border-b-2 border-primary">
+            <h2 className="text-4xl font-bold">Navigation Menu</h2>
+
+            <button
+              className="text-primary bg-foreground rounded-full hover:bg-secondary duration-300 size-16 flex justify-center items-center focus:outline-none"
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
           <nav>
             <ul className="flex flex-col items-center gap-8 py-16">
               {menu.map((item) => (
-                <li
-                  key={item.name}
-                  className="border-b-2 border-primary w-5/6 text-center py-2"
-                >
-                  <Link href={item.href} onClick={() => setIsMenuOpen(false)}>
-                    <p className="text-foreground hover:text-primary font-bold duration-300">
-                      {item.name}
-                    </p>
+                <li key={item.name} className=" w-5/6 text-center py-2">
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-center w-full justify-between hover:w-[105%] duration-200 text-foreground hover:text-primary"
+                  >
+                    <p className=" text-xl font-bold duration-300">{item.name}</p>
+                    <FaArrowRight />
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
-        </div>
+        </motion.div>
       </div>
     </>
   );
