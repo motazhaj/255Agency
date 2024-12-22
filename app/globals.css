@@ -2,6 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define the Regular font */
+@font-face {
+  font-family: "ABD ELRADY";
+  src: url("/fonts/ABD ELRADY REGULAR.OTF") format("opentype");
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+/* Define the Bold font */
+@font-face {
+  font-family: "ABD ELRADY";
+  src: url("/fonts/ABD ELRADY BOLD.OTF") format("opentype");
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+
+/* Define the Medium font */
+@font-face {
+  font-family: "ABD ELRADY";
+  src: url("/fonts/ABD ELRADY MEDIUM.OTF") format("opentype");
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+/* Define the Thin font */
+@font-face {
+  font-family: "ABD ELRADY";
+  src: url("/fonts/ABD ELRADY THIN.OTF") format("opentype");
+  font-weight: 300; /* Thin weight */
+  font-style: normal;
+}
+
+/* Define the Italic font */
+@font-face {
+  font-family: "ABD ELRADY";
+  src: url("/fonts/ABDELRADY-ITALIC.OTF") format("opentype");
+  font-weight: 400; /* Regular weight for italic */
+  font-style: italic;
+}
+
+/* Define additional fonts (optional) */
+@font-face {
+  font-family: "TALASEM";
+  src: url("/fonts/TALASEM V.1.0.OTF") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --background: #222222;
   --foreground: #ededed;
@@ -29,5 +77,5 @@
 body {
   color: var(--foreground);
   background: #ff5100;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "ABD ELRADY", Arial, sans-serif;
 }
