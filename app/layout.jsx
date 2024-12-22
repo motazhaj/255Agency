@@ -1,14 +1,10 @@
-import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Container from "@/components/layout/Container";
 import Footer from "@/components/layout/Footer";
-import ScrollToBottomButton from "@/components/layout/ScrollToBottom";
 
 const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "255 Agency",
@@ -21,7 +17,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/255-logo.svg" />
       </head>
-      <body className={inter.className + "relative w-full flex flex-col justify-between min-h-[160vh] md:min-h-[145vh]"}>
+      <body className="relative w-full flex flex-col justify-between min-h-[160vh] md:min-h-[145vh]">
         <Header />
         <main className="z-10 w-full max-w-screen-xl mx-auto overflow-x-clip">
           <Container>{children}</Container>
