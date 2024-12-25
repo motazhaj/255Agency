@@ -106,7 +106,7 @@ const MobileMenu = () => {
               {menu.map((item) => (
                 <li key={item.title} className=" w-5/6 text-center py-2">
                   <Link
-                    href={"/services/" + item.slug}
+                    href={item.slug}
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center w-full justify-between hover:w-[105%] duration-200 text-foreground hover:text-primary"
                   >
