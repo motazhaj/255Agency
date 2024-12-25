@@ -4,13 +4,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { servicesData } from "@/data/servicesData";
+import { MdDesignServices } from "react-icons/md";
 
 const menu = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "About Us", href: "/about" },
-  { name: "Contact Us", href: "/contact" },
-  { name: "Media", href: "/blog" },
+  // { title: "Home", slug: "/" },
+  { title: "All Services", slug: "/services" },
+  // { title: "About", slug: "/about" },
+  // { title: "Media", slug: "/blog" },
+  { title: "Contact", slug: "/contact" },
 ];
 
 const MobileMenu = () => {
@@ -19,7 +21,7 @@ const MobileMenu = () => {
   return (
     <>
       <button
-        className="text-primary bg-foreground hover:bg-secondary duration-300 drop-shadow-xl rounded-full size-16 flex justify-center items-center focus:outline-none"
+        className="text-primary bg-foreground hover:bg-secondary duration-300 drop-shadow-xl rounded-full py-4 sm:px-6 px-4 flex justify-center items-center focus:outline-none"
         onClick={() => setIsMenuOpen((prev) => !prev)}
       >
         <svg
@@ -36,6 +38,7 @@ const MobileMenu = () => {
             d="M4 6h16M4 12h16M4 18h16"
           />
         </svg>
+        <p className="ml-2 text-xl sm:text-2xl font-bold">Services!</p>
       </button>
 
       {/* Mobile Menu */}
@@ -54,7 +57,7 @@ const MobileMenu = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <div className="flex w-[90%] justify-between items-center m-[5%] pb-8 border-b-2 border-primary">
-            <h2 className="text-4xl font-bold">Navigation Menu</h2>
+            <h2 className="text-4xl font-bold">Our Services!</h2>
 
             <button
               className="text-primary bg-foreground rounded-full hover:bg-secondary duration-300 size-16 flex justify-center items-center focus:outline-none"
@@ -77,15 +80,39 @@ const MobileMenu = () => {
             </button>
           </div>
           <nav>
-            <ul className="flex flex-col items-center gap-8 py-16">
-              {menu.map((item) => (
-                <li key={item.name} className=" w-5/6 text-center py-2">
+            <ul className="flex flex-col items-center gap-2 py-8">
+              {servicesData.map((item) => (
+                <li key={item.id} className=" w-5/6 text-center py-2">
                   <Link
-                    href={item.href}
+                    href={"/services/" + item.slug}
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center w-full justify-between hover:w-[105%] duration-200 text-foreground hover:text-primary"
                   >
-                    <p className=" text-xl font-bold duration-300">{item.name}</p>
+                    <div className="flex items-center gap-4">
+                      <div className="min-width-[28px]">
+                        <MdDesignServices size={28} />
+                      </div>
+
+                      <p className="text-start text-lg sm:text-xl font-bold duration-300">
+                        {item.title}
+                      </p>
+                    </div>
+                    <FaArrowRight />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul className="flex flex-col items-center gap-4 py-8 absolute bottom-0 w-full">
+              {menu.map((item) => (
+                <li key={item.title} className=" w-5/6 text-center py-2">
+                  <Link
+                    href={"/services/" + item.slug}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-center w-full justify-between hover:w-[105%] duration-200 text-foreground hover:text-primary"
+                  >
+                    <div className="flex items-center gap-4">
+                      <p className=" text-xl font-bold duration-300">{item.title}</p>
+                    </div>
                     <FaArrowRight />
                   </Link>
                 </li>

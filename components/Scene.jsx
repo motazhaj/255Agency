@@ -8,8 +8,6 @@ import { useProgress, Html, Sparkles, OrbitControls } from "@react-three/drei";
 export default function Scene() {
   const scalingFactor = window.innerWidth / 1300;
 
-  console.log(scalingFactor);
-
   const computeCamPosition = () => {
     if (scalingFactor < 0.5) {
       return [18, 18, 18];
