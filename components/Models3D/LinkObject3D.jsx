@@ -22,7 +22,6 @@ const LinkObject3D = ({ object, link }) => {
         y: 0.02,
         transition: { duration: 0.2, type: "spring", stiffness: 200 },
       }}
-      onTap={() => console.log("tapped!")}
       onPointerOver={handlePointerOver}
       onPointerOut={handlePointerOut}
     />
