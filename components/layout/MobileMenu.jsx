@@ -38,7 +38,7 @@ const MobileMenu = () => {
             d="M4 6h16M4 12h16M4 18h16"
           />
         </svg>
-        <p className="ml-2 text-xl sm:text-2xl font-bold">Services!</p>
+        <p className="ml-2 mb-1 text-xl sm:text-2xl font-bold">Services!</p>
       </button>
 
       {/* Mobile Menu */}
