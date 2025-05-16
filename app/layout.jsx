@@ -3,8 +3,6 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Container from "@/components/layout/Container";
 
-const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
-
 export const metadata = {
   title: "255 Agency",
   description:
@@ -22,9 +20,6 @@ export default function RootLayout({ children }) {
         <main className="z-10 w-full max-w-screen-xl mx-auto overflow-x-clip">
           <Container>{children}</Container>
         </main>
-        <div className="h-screen fixed w-full top-0">
-          <Scene />
-        </div>
       </body>
     </html>
   );
