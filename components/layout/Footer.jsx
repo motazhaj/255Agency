@@ -2,18 +2,18 @@ import React from "react";
 import Container from "./Container";
 import Image from "next/image";
 import Link from "next/link";
-import { navMenu } from "./Header";
+import { navMenu1,navMenu2 } from "./Header";
 
 const Footer = () => {
   return (
-    <footer className="w-full z-10 py-4">
+    <footer className="w-full z-10 py-4 bg-background/20">
       <Container className="flex">
-        <div className="backdrop-blur-xl bg-background/80 p-12 rounded-[40px] min-h-[200px]">
+        <div className="backdrop-blur-xl p-12 min-h-[200px]">
           <div className="w-full flex items-start justify-between">
             <div className="w-2/3 h-full flex flex-col gap-4 justify-start">
               <Link
                 href="/"
-                className="flex items-center gap-1 w-fit hover:scale-110 duration-300"
+                className="flex items-center gap-2 w-fit hover:scale-110 duration-300"
               >
                 <Image
                   src="/255-logo-white.svg"
@@ -22,7 +22,7 @@ const Footer = () => {
                   height={70}
                   className="size-[70px]"
                 />
-                <h1 className="text-xl font-bold drop-shadow-lg">255 Agency</h1>
+                <h1 className="text-xl font-bold drop-shadow-lg"> Agency</h1>
               </Link>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
@@ -32,7 +32,7 @@ const Footer = () => {
             </div>
             <nav className="w-1/3 ml-4 lg:ml-32">
               <ul className="gap-4 flex flex-col">
-                {navMenu.map((item) => (
+                {navMenu1.concat(navMenu2).map((item) => (
                   <li key={item.name}>
                     <Link href={item.href}>
                       <p className="hover:text-secondary hover:scale-110 font-bold duration-300 w-fit">
