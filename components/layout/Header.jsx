@@ -33,7 +33,7 @@ export const navMenu2 = [
 ];
 const Navbar = () => {
   return (
-    <header className="z-50 w-full h-20 py-4 fixed">
+    <header className="z-50 w-full h-20 py-4 fixed backdrop-blur-lg">
       <div className={"h-[70px] flex items-center max-w-screen-xl mx-auto"}>
         <div className="w-full flex items-center justify-between sm:px-6 px-2">
           <NavMenu items={navMenu1} />
