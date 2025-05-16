@@ -51,7 +51,7 @@
 }
 
 :root {
-  --background: #222222;
+  --background: #404040;
   --foreground: #ededed;
 }
 
@@ -61,13 +61,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #222222; /* Background of the scrollbar track */
+  background: #404040; /* Background of the scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ff5100; /* Color of the scrollbar thumb */
+  background-color: #ff3600; /* Color of the scrollbar thumb */
   border-radius: 10px; /* Rounded corners */
-  border: 2px solid #222222; /* Adds padding around the thumb */
+  border: 2px solid #404040; /* Adds padding around the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -76,6 +76,6 @@
 
 body {
   color: var(--foreground);
-  background: #ff5100;
+  background: #ff3600;
   font-family: "ABD ELRADY", Arial, sans-serif;
 }
