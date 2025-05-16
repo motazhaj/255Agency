@@ -1,3 +1,33 @@
+export const navMenu1 = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "Services",
+    href: "/services",
+  },
+  {
+    name: "Portfolio",
+    href: "/portfolio",
+  },
+];
+
+export const navMenu2 = [
+  {
+    name: "About Us",
+    href: "/about",
+  },
+  {
+    name: "Contact Us",
+    href: "/contact",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+  },
+];
+
 export const servicesData = [
   {
     id: 1,

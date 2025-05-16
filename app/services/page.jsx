@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import ServiceCard from "@/components/services/ServiceCard";
 import React from "react";
 
-import { servicesData } from "@/data/servicesData";
+import { servicesData } from "@/data/data";
 
 const page = () => {
   return (
