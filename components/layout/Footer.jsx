@@ -2,13 +2,13 @@ import React from "react";
 import Container from "./Container";
 import Image from "next/image";
 import Link from "next/link";
-import { navMenu1,navMenu2 } from "./Header";
+import { navMenu1, navMenu2 } from "@/data/data";
 
 const Footer = () => {
   return (
     <footer className="w-full z-10 py-4 bg-background/20">
       <Container className="flex">
-        <div className="backdrop-blur-xl p-12 min-h-[200px]">
+        <div className="p-12 min-h-[200px]">
           <div className="w-full flex items-start justify-between">
             <div className="w-2/3 h-full flex flex-col gap-4 justify-start">
               <Link
@@ -25,9 +25,10 @@ const Footer = () => {
                 <h1 className="text-xl font-bold drop-shadow-lg"> Agency</h1>
               </Link>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
-                repudiandae aut tenetur mollitia pariatur magni qui maxime quisquam ullam
-                incidunt sapiente beatae ab numquam in, velit dolores officia illo omnis.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ducimus repudiandae aut tenetur mollitia pariatur magni qui
+                maxime quisquam ullam incidunt sapiente beatae ab numquam in,
+                velit dolores officia illo omnis.
               </p>
             </div>
             <nav className="w-1/3 ml-4 lg:ml-32">
