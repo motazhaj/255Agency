@@ -1,7 +1,6 @@
-import dynamic from "next/dynamic";
+import Footer from "@/components/layout/Footer";
 import "./globals.css";
 import Header from "@/components/layout/Header";
-import Container from "@/components/layout/Container";
 
 export const metadata = {
   title: "255 Agency",
@@ -17,9 +16,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className="relative w-full flex flex-col justify-between">
         <Header />
-        <main className="z-10 w-full max-w-screen-xl mx-auto overflow-x-clip">
-          <Container>{children}</Container>
+        <main className="w-full flex-col gap-40 mx-auto overflow-x-clip">
+          {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
