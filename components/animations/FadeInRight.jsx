@@ -7,7 +7,7 @@ const FadeInRight = ({ children, className }) => {
       className={className}
       initial={{ opacity: 0, x: 300 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1.5, type: "spring", ease: "easeOut" }}
+      transition={{ duration: 2, type: "spring", ease: "easeOut" }}
       viewport={{ once: true }}
     >
       {children}
