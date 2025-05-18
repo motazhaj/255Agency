@@ -74,6 +74,10 @@
   background-color: #ff702d; /* Darker color on hover */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: #ff3600;
