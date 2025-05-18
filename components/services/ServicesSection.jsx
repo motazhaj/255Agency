@@ -4,28 +4,28 @@ import React from "react";
 const services = [
   {
     title: "SOCIAL MEDIA",
-    link: "/services/social-media",
+    link: "/social-media",
   },
   {
     title: "VIDEO PRODUCTION",
-    link: "/services/video-production",
+    link: "/video-production",
   },
   {
     title: "PHOTOGRAPHY",
-    link: "/services/photography",
+    link: "/photography",
   },
 
   {
     title: "MARKETING",
-    link: "/services/marketing-campaigns",
+    link: "/marketing-campaigns",
   },
   {
     title: "Printables",
-    link: "/services/printables",
+    link: "/printables",
   },
   {
     title: "Events",
-    link: "/services/events",
+    link: "/events",
   },
 ];
 
@@ -38,7 +38,7 @@ const ServicesSection = () => {
       <ul>
         {services.map((item, index) => (
           <li key={index}>
-            <ServiceItem title={item.title} link={item.link} />
+            <ServiceItem title={item.title} link={"/services" + item.link} />
           </li>
         ))}
       </ul>
