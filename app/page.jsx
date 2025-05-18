@@ -4,6 +4,7 @@ import FadeInLeft from "@/components/animations/FadeInLeft";
 import FadeInRight from "@/components/animations/FadeInRight";
 import LinkButtonFill from "@/components/buttons/LinkButtonFill";
 import Container from "@/components/layout/Container";
+import FeaturedWorks from "@/components/services/FeaturedWorks";
 import PortfolioSection from "@/components/services/PortfolioSection";
 import ServicesSection from "@/components/services/ServicesSection";
 import Image from "next/image";
@@ -71,9 +72,27 @@ export default function Home() {
                 alt="logo"
                 width={600}
                 height={900}
-                className="h-[900px] drop-shadow-xl object-contain mx-auto"
+                className="h-[90dvh] drop-shadow-xl object-contain mx-auto"
               />
             </FadeInBottom>
+          </div>
+          <div className="absolute w-[300px] top-1/4 left-[20%] transform -translate-y-1/2 z-20">
+            <Image
+              src="/designs/glasses.png"
+              alt="logo"
+              width={200}
+              height={100}
+              className="h-[100px] object-contain mx-auto  animate-bounce"
+            />
+          </div>
+          <div className="absolute w-[300px] top-3/4 right-[20%] transform -translate-y-1/2 z-20 -rotate-12">
+            <Image
+              src="/designs/glasses.png"
+              alt="logo"
+              width={200}
+              height={100}
+              className="h-[100px] object-contain mx-auto  animate-bounce"
+            />
           </div>
         </section>
       </FadeIn>
@@ -112,14 +131,14 @@ export default function Home() {
           </p>
         </div>
         <FadeInRight>
-          <div className="absolute left-40 size-[800px] rounded-full flex justify-left border-8 border-foreground items-center px-40">
+          <div className="absolute left-20 size-[800px] rounded-full flex justify-left border-8 border-foreground items-center px-40">
             <p className="text-[190px] leading-[180px] font-bold text-foreground text-left mb-[190px]">
               WE
             </p>
           </div>
         </FadeInRight>
         <FadeInLeft>
-          <div className="absolute right-40 size-[800px] rounded-full flex justify-left border-8 border-foreground items-center px-40">
+          <div className="absolute right-20 size-[800px] rounded-full flex justify-left border-8 border-foreground items-center px-40">
             <p className="text-[190px] leading-[180px] font-bold text-foreground text-right mb-[190px]">
               AN AD
             </p>
@@ -143,6 +162,7 @@ export default function Home() {
         </section>
       </FadeIn>
 
+      <FeaturedWorks />
       <section>
         <Image
           src="/designs/ourClients.png"
