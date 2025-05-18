@@ -56,11 +56,11 @@ export default function Home() {
           <div className="absolute bottom-40 -z-10">
             <FadeIn>
               <Image
-                src="/designs/logoPattern.png"
+                src="/designs/LogoPattern.png"
                 alt="logo"
-                width={2200}
+                width={1900}
                 height={400}
-                className="h-[400px] object-cover mx-auto"
+                className="h-[400px] w-full object-cover mx-auto"
               />
             </FadeIn>
           </div>
