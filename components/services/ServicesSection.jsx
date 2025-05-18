@@ -31,7 +31,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="flex flex-col gap-8">
+    <section id="services" className="flex flex-col gap-8 scroll-mt-24">
       <h2 className="text-[90px] max-h-[110px] overflow-hidden flex items-center bg-background/30 animate-pulse min-w-[3000px] tracking-[.25em]">
         E-SERVICES-SERVICES-SERVICES-SERVIC ES-SERVICES
       </h2>
