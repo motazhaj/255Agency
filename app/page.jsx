@@ -3,6 +3,7 @@ import FadeInBottom from "@/components/animations/FadeInBottom";
 import FadeInLeft from "@/components/animations/FadeInLeft";
 import FadeInRight from "@/components/animations/FadeInRight";
 import LinkButtonFill from "@/components/buttons/LinkButtonFill";
+import ContactUsSection from "@/components/ContactUsSection";
 import Container from "@/components/layout/Container";
 import FeaturedWorks from "@/components/services/FeaturedWorks";
 import PortfolioSection from "@/components/services/PortfolioSection";
@@ -164,6 +165,9 @@ export default function Home() {
 
       <FeaturedWorks />
       <section>
+        <Container>
+          <h2 className="text-5xl font-bold mb-8 mt-20">Our Clients</h2>
+        </Container>
         <Image
           src="/designs/ourClients.png"
           alt="255 clients"
@@ -179,6 +183,8 @@ export default function Home() {
           className="w-full"
         />
       </section>
+
+      <ContactUsSection />
     </>
   );
 }
