@@ -1,11 +1,11 @@
 export const navMenu1 = [
   {
     name: "Home",
-    href: "/",
+    href: "/#",
   },
   {
     name: "Services",
-    href: "/services",
+    href: "/#services",
   },
   {
     name: "Portfolio",
