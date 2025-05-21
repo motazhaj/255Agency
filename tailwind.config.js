@@ -25,8 +25,8 @@ module.exports = {
         sm: "640px", // Mobile: from 640px and above
         md: "768px", // Tablet: from 768px and above
         lg: "1024px", // Desktop: from 1024px and above
-        xl: "1280px", // Large desktop: from 1280px and above
-        "2xl": "1600px", // Large desktop: from 1280px and above
+        xl: "1300px",
+        "2xl": "1600px",
       },
       boxShadow: {
         xl: "0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)",
