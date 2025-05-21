@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <FadeIn>
         <section className="relative flex flex-col justify-center py-20 min-h-screen">
-          <h1 className="text-9xl w-[850px] lg:scale-125 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-3/4 font-bold">
+          <h1 className="text-8xl w-[850px] lg:scale-125 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-3/4 font-bold">
             <FadeInRight>C R E A T I V I T Y</FadeInRight>
           </h1>
           <div className="absolute w-[300px] top-1/2 left-[20%] transform -translate-y-1/2 z-20">
@@ -115,9 +115,9 @@ export default function Home() {
       </FadeInBottom>
 
       <FadeIn>
-        <section className="flex flex-col gap-4 justify-center items-center">
+        <section className="flex flex-col gap-4 justify-center items-center bg-foreground text-primary py-8">
           <h3 className="text-3xl font-bold">255 Who?</h3>
-          <p className="text-xl text-foreground/80 max-w-screen-lg text-center">
+          <p className="text-xl max-w-screen-lg text-center">
             We are a digital-focused Palestine-based studio. Our
             multidisciplinary team of freelancers and an A.. multiplies creative
             results and helps brands flourish.
@@ -125,22 +125,22 @@ export default function Home() {
         </section>
       </FadeIn>
 
-      <section className="relative my-32 min-h-screen scale-90">
+      <section className="relative min-h-screen scale-[60%] lg:scale-75 xl:scale-90 my-32">
         <div className="absolute left-1/2 -translate-x-1/2 z-50 size-[800px] bg-foreground rounded-full flex justify-center items-center px-40">
-          <p className="text-[190px] leading-[180px] font-bold text-primary text-center">
+          <p className="text-[150px] leading-[150px] font-bold text-primary text-center">
             MAKE YOUR AD
           </p>
         </div>
         <FadeInRight>
-          <div className="absolute left-20 size-[800px] rounded-full flex justify-left border-8 border-foreground items-center px-40">
-            <p className="text-[190px] leading-[180px] font-bold text-foreground text-left mb-[190px]">
+          <div className="absolute left-1/2 -mt-[500px] lg:-mt-0 lg:-ml-[450px] -translate-x-1/2 size-[800px] rounded-full flex border-8 border-foreground items-center px-40">
+            <p className="text-[150px] w-fit leading-[150px] font-bold text-foreground text-left mb-[150px]">
               WE
             </p>
           </div>
         </FadeInRight>
         <FadeInLeft>
-          <div className="absolute right-20 size-[800px] rounded-full flex justify-left border-8 border-foreground items-center px-40">
-            <p className="text-[190px] leading-[180px] font-bold text-foreground text-right mb-[190px]">
+          <div className="absolute left-1/2 mt-[500px] lg:mt-0 lg:ml-[450px] -translate-x-1/2 size-[800px] rounded-full flex lg:justify-end border-8 border-foreground items-center px-40">
+            <p className="text-[150px] w-fit leading-[150px] font-bold text-foreground text-right pt-[200px] lg:pt-0 lg:mb-[150px] ">
               AN AD
             </p>
           </div>
@@ -164,6 +164,7 @@ export default function Home() {
       </FadeIn>
 
       <FeaturedWorks />
+
       <section>
         <Container>
           <h2 className="text-5xl font-bold mb-8 mt-20">Our Clients</h2>
@@ -173,14 +174,17 @@ export default function Home() {
           alt="255 clients"
           width={1920}
           height={1080}
-          className="w-full"
+          className="w-full drop-shadow-xl"
         />
+        <Container>
+          <h2 className="text-5xl font-bold mb-8 mt-20">Our Team</h2>
+        </Container>
         <Image
           src="/designs/ourTeam.png"
           alt="255 Team"
           width={1920}
           height={1080}
-          className="w-full"
+          className="w-full drop-shadow-xl"
         />
       </section>
 
