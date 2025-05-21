@@ -30,11 +30,11 @@ const portfolioItems = [
 const PortfolioSection = () => {
   return (
     <section className="flex flex-col gap-8">
-      <h2 className="text-[90px] max-h-[110px] overflow-hidden flex items-center bg-background/30 -mt-12 animate-pulse min-w-[3000px] tracking-[.25em]">
+      <h2 className="text-[70px] max-h-[110px] overflow-hidden flex items-center bg-background/30 -mt-12 animate-pulse min-w-[3000px] tracking-[.25em]">
         O-PORTFOLIO-PORTFOLIO-PORTFOLIO-PORT FOLIO
       </h2>
       <Container className={"mb-32"}>
-        <ul className="flex gap-8 flex-wrap justify-center">
+        <ul className="flex gap-8 justify-center">
           {portfolioItems.map((item, index) => (
             <li key={index}>
               <PortfolioItemCard

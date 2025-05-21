@@ -9,10 +9,10 @@ const PortfolioItemCard = ({ img, title, link, textStyle }) => {
       <Link href={`/portfolio/${link}`}>
         <Image
           src={img}
-          alt="logo"
+          alt="client cover image"
           width={350}
           height={350}
-          className="w-full h-[350px] object-cover drop-shadow-xl"
+          className="w-full h-[320px] object-cover drop-shadow-xl rounded-xl bg-white"
         />
         <div className="flex w-full justify-between items-center my-4">
           <h3 className={`text-xl font-bold ${textStyle}`}>{title}</h3>

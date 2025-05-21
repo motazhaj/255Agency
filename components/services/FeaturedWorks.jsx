@@ -62,7 +62,7 @@ const featuredWorks = [
 
 const FeaturedWorks = () => {
   return (
-    <section>
+    <section className="bg-foreground text-primary py-12">
       <Container>
         <h3 className="text-5xl font-bold">Featrued Works</h3>
         {featuredWorks.map((item, index) => (
@@ -75,13 +75,13 @@ const FeaturedWorks = () => {
 
 const FeaturedWorkCard = ({ title, images }) => {
   return (
-    <div className="flex flex-col gap-4 my-6 bg-white p-4 w-full rounded-xl">
+    <div className="flex flex-col gap-4 my-6 p-4 w-full rounded-xl">
       <h3 className="text-5xl font-bold text-primary">{title}</h3>
-      <ul className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+      <ul className="flex gap-4 w-full py-4 overflow-x-scroll">
         {images.map((item, index) => (
           <li key={index}>
             <Image
-              className="rounded-lg drop-shadow-lg h-[250px] w-full object-cover"
+              className="rounded-lg drop-shadow-lg h-[250px] min-w-[250px] object-cover"
               src={item}
               alt=""
               width={250}
