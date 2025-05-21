@@ -28,60 +28,21 @@ export const navMenu2 = [
   },
 ];
 
-export const servicesData = [
+export const clientsData = [
   {
-    id: 1,
-    title: "Design",
+    slug: "grand-nablus-bus-co",
+    title: "Grand Nablus Bus CO.",
     description:
-      "We provide creative designs that enhance your visual identity in all aspects, clearly conveying your message.",
-    image: "https://placehold.co/600x400",
-    slug: "design",
+      "THE GRAND NABLUS BUS COMPANY'S BRANDING IS NOT JUST ABOUT ITS DISTINCTIVE LOGO AND VIBRANT COLOR SCHEME; IT'S A REFLECTION OF ITS UNWAVERING COMMITMENT TO PROVIDE A SUPERIOR TRANSPORTATION EXPERIENCE. THE BRANDING ENCAPSULATES THE ESSENCE OF NABLUS, ITS WARMTH, AND HOSPITALITY, PROMISING RELIABLE, EFFICIENT, AND COMFORTABLE JOURNEYS. EACH BUS RIDE EMBODIES PUNCTUALITY, SAFETY, AND PRISTINE CLEANLINESS, RESONATING WITH THE GRANDEUR OF NABLUS ITSELF, WITH ITS DISTINCTIVE BRANDING.",
+    descriptionAr:
+      "الهوية البصرية لشركة باصات نابلس الكبرى لا تعتمد فقط على شعارها المميز ونظام الألوان الزاهية؛ بل إنها تعكس التزامها الراسخ بتوفير تجربة نقل متميزة. يجسد الهوية التجارية للشركة جوهر نابلس، ودفئها وضيافتها، وتعد برحلات موثوقة وفعالة ومريحة. تجسد كل رحلة بالحافلة الالتزام بالتوقيت والسلامة والنظافة المثالية متجاوبة مع روعة نابلس نفسها، من خلال الهوية البصرية المميزة.",
   },
   {
-    id: 2,
-    title: "Digital Marketing Service",
+    slug: "hulk-burger",
+    title: "Hulk Burger",
     description:
-      "We build digital strategies to enhance your online presence across platforms, boosting customer engagement and sales.",
-    image: "https://placehold.co/600x400",
-    slug: "digital-marketing",
-  },
-  {
-    id: 3,
-    title: "Marketing Campaigns",
-    description:
-      "Integrated marketing strategies for attractive and distinctive online and offline campaigns that increase your brand awareness.",
-    image: "https://placehold.co/600x400",
-    slug: "campaigns",
-  },
-  {
-    id: 4,
-    title: "Interior and Exterior Design",
-    description:
-      "Attractive and modern interior and exterior designs for homes, companies, restaurants, and projects, reflecting beauty and functionality.",
-    image: "https://placehold.co/600x400",
-  },
-  {
-    id: 5,
-    title: "Photography, Video Shooting, and Editing",
-    description:
-      "Our professional photography, video shooting, and editing services highlight your brand's value.",
-    image: "https://placehold.co/600x400",
-    slug: "photography",
-  },
-  {
-    id: 6,
-    title: "Web and E-commerce, Software Solutions",
-    description:
-      "We offer integrated web and Online shop solutions along with professional software solutions to enhance your digital presence and optimize your project's performance efficiently.",
-    image: "https://placehold.co/600x400",
-    slug: "development",
-  },
-  {
-    id: 7,
-    title: "3D Animation",
-    description:
-      "We offer 3D animation solutions that enhance the viewer's experience and convey strong messages.",
-    image: "https://placehold.co/600x400",
-    slug: "3d-animation",
+      "At 255, the Creativity Factory, we turn power into art with HULK!🔥 \nWe're proud of our partnership with Hulk Burger Palestine, leading their digital marketing, advertising campaigns, visual branding, as well as content creation, photography, and video production",
+    descriptionAr:
+      "HULK! في 255 مصنع الإبداع، نحول القوة إلى فن مع 🔥 \nنفتخر بشراكتنا مع سلسلة مطاعم Hulk Burger حيث نقود إدارة التسويق الرقمي، والحملات الإعلانية، والهوية البصرية، بالإضافة إلى بناء المحتوى، والتصوير، والمونتاج",
   },
 ];
