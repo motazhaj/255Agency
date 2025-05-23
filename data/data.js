@@ -16,7 +16,7 @@ export const navMenu1 = [
 export const navMenu2 = [
   {
     name: "About Us",
-    href: "/",
+    href: "/about",
   },
   {
     name: "Contact Us",

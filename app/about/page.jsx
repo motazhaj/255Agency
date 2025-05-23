@@ -1,155 +1,90 @@
-import CallToAction from "@/components/CallToAction";
-import PageOverlayed from "@/components/layout/PageOverlayed";
-import PageHeader from "@/components/PageHeader";
+import Container from "@/components/layout/Container";
+import Image from "next/image";
 import React from "react";
-import { FaCheckSquare } from "react-icons/fa";
-
-const team = [
-  {
-    name: "John Doe",
-    role: "CEO",
-    image: "https://placehold.co/300x300",
-  },
-  {
-    name: "Jane Doe",
-    role: "CTO",
-    image: "https://placehold.co/300x300",
-  },
-  {
-    name: "John Doe",
-    role: "Designer",
-    image: "https://placehold.co/300x300",
-  },
-  {
-    name: "Jane Doe",
-    role: "Developer",
-    image: "https://placehold.co/300x300",
-  },
-  {
-    name: "John Doe",
-    role: "Accountant",
-    image: "https://placehold.co/300x300",
-  },
-  {
-    name: "Jane Doe",
-    role: "Designer",
-    image: "https://placehold.co/300x300",
-  },
-];
 
 const page = () => {
   return (
-    <PageOverlayed title="About Us" image="https://placehold.co/1600x200">
-      <div className="flex flex-col gap-8 text-foreground">
-        <PageHeader
-          text="Who are we?"
-          subtext="Discover the heart of our agency and our commitment to making your brand stand out."
-          className="text-primary font-extrabold text-3xl sm:text-4xl lg:text-5xl"
+    <div className="min-h-[calc(100vh-500px)] bg-foreground py-24">
+      <section className="h-[700px] bg-primary flex flex-col justify-center items-center overflow-hidden relative">
+        <Image
+          className="absolute w-screen"
+          src="/designs/heroPattern.png"
+          width={2000}
+          height={1000}
         />
-
-        {/* Section 1: Mission Statement */}
-        <section className="mission mx-auto">
-          <div className=" mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary">Our Mission</h2>
-            <p className="leading-relaxed text-xl text-foreground opacity-80 mt-4">
-              We craft experiences, stories, and solutions that connect businesses to their audience
-              in the most innovative way possible. Our mission is to help you grow and succeed by
-              combining strategy, creativity, and technology.
-            </p>
+        <h1 className="text-8xl font-bold z-20">UNLEASH BOLD IDEAS</h1>
+        <p className="text-5xl pt-2 z-20">CREATE THE UNEXPECTED</p>
+      </section>
+      <section className="py-24">
+        <Container>
+          <p className="text-2xl text-primary">
+            255 Advertising Agency was established in 2020 with a vision to
+            elevate the standards of marketing, events, and social media
+            solutions in Palestine. As a creative powerhouse, 255 specializes in
+            delivering innovative, results-driven strategies tailored to the
+            needs of businesses across various sectors. Since its founding, the
+            agency has rapidly grown into a leading name in the industry, known
+            for its fresh ideas, dynamic campaigns, and strong client
+            relationships.
+            <br />
+            <br />
+            With a talented and passionate team, 255 Advertising Agency serves a
+            diverse client base—from startups to established brands—contributing
+            to their growth, visibility, and success. Through our integrated
+            approach and commitment to staying at the forefront of digital
+            trends, we continue to shape impactful brand experiences and
+            meaningful audience engagement across platforms.
+          </p>
+          <img
+            src="https://placehold.co/1300x600"
+            alt="about us image"
+            className="w-full my-24 rounded-lg"
+          />
+          <p className="text-2xl text-primary">
+            At 255 Advertising Agency, social and environmental responsibility
+            has been a core value since our establishment in 2020. As we work to
+            shape the future of branding and communication in Palestine, we
+            recognize our role in building a more sustainable and inclusive
+            society.
+            <br />
+            <br />
+            We believe that impactful marketing goes beyond promotion—it drives
+            positive change, supports communities, and reflects shared values.
+            That's why we've integrated a broad sustainability vision into our
+            operations, partnerships, and campaigns. For us, real progress
+            starts at the community level. By empowering local businesses,
+            supporting creative talent, and promoting purpose-driven
+            initiatives, we help build a stronger social and economic
+            foundation.
+            <br />
+            <br />
+            At 255, we are committed to helping our clients and communities
+            thrive—especially in challenging times. Whether through awareness
+            campaigns, community engagement events, or strategic collaborations,
+            we seek to open new doors, spark meaningful conversations, and
+            deliver long-term value.
+            <br />
+            <br />
+            We believe that by “doing good” in the marketing world—through
+            ethical practices, inclusive storytelling, and responsible
+            communication—we can be a catalyst for cultural, social, and
+            economic development in Palestine and beyond.
+          </p>
+          <div className="flex flex-col md:flex-row gap-4">
+            <img
+              src="https://placehold.co/700x600"
+              alt="about us image"
+              className="w-full mt-24 rounded-lg"
+            />
+            <img
+              src="https://placehold.co/700x600"
+              alt="about us image"
+              className="w-full mt-24 rounded-lg"
+            />
           </div>
-        </section>
-
-        {/* Section 2: Our Story */}
-        <section className="our-story mx-auto mb-24">
-          <div className="flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12">
-            <div className="w-full lg:w-1/2">
-              <img
-                src="https://placehold.co/600x400"
-                alt="Our Story"
-                className="rounded-2xl shadow-lg transform transition duration-500 ease-in-out hover:scale-105"
-              />
-            </div>
-            <div className="w-full lg:w-1/2">
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary">Our Story</h2>
-              <p className="leading-relaxed text-xl text-foreground mt-4 opacity-80">
-                Founded in 2010 by a small group of passionate creatives, our agency has evolved
-                into a global leader in the advertising space. Our dedication to creativity,
-                innovation, and client success has led us to work with top-tier brands around the
-                world.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 3: Why Choose Us */}
-        <section className="why-choose-us bg-gradient-to-t rounded-2xl from-primary to-orange-500 text-background p-8 md:p-16">
-          <div className="mx-auto ">
-            <h2 className="text-3xl lg:text-4xl font-bold">Why Choose Us?</h2>
-            <p className="leading-relaxed text-xl opacity-80 mt-4">
-              We are more than just an agency. We are your partners in building a brand that
-              resonates. Here's why clients choose us:
-            </p>
-            <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-              {[
-                "Proven track record of delivering results",
-                "Customized strategies tailored to your needs",
-                "A creative, innovative team with diverse skills",
-              ].map((feature, index) => (
-                <li key={index} className="flex items-start space-x-4">
-                  <FaCheckSquare className="text-4xl text-foreground" />
-                  <p className="text-xl">{feature}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* Section 4: Meet the Team */}
-        <section className="our-team w-full mx-auto my-24">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary  mb-8">Meet the Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-12">
-            {team.map((person, index) => (
-              <div
-                key={index}
-                className="team-member bg-foreground p-6 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
-              >
-                <img
-                  src={person.image}
-                  className="size-40 bg-background rounded-full mx-auto mb-4"
-                ></img>
-                <h3 className="text-xl font-semibold  text-primary">{person.name}</h3>
-                <p className=" text-background">{person.role}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Section 5: Client Testimonials */}
-        <section className="testimonials mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary  mb-8">
-            What Our Clients Say
-          </h2>
-          <div className="space-y-8">
-            <div className="testimonial bg-foreground text-background p-8 rounded-xl shadow-lg hover:shadow-xl transition-all">
-              <p className="text-lg italic">
-                "This agency transformed our marketing strategy. Their creativity and innovation
-                helped us achieve results beyond our expectations."
-              </p>
-              <p className="mt-4 text-primary font-semibold">Client Name, Company</p>
-            </div>
-            <div className="testimonial bg-foreground text-background p-8 rounded-xl shadow-lg hover:shadow-xl transition-all">
-              <p className="text-lg italic">
-                "We partnered with this agency for our latest campaign, and the results were
-                phenomenal. They truly understand our vision and needs."
-              </p>
-              <p className="mt-4 text-primary font-semibold">Client Name, Company</p>
-            </div>
-          </div>
-        </section>
-
-        <CallToAction />
-      </div>
-    </PageOverlayed>
+        </Container>
+      </section>
+    </div>
   );
 };
 
