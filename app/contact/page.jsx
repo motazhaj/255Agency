@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhone, FaWhatsapp } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 import Container from "@/components/layout/Container";
@@ -16,7 +16,9 @@ const ContactPage = () => {
           width={2000}
           height={1000}
         />
-        <h1 className="text-4xl md:text-8xl font-bold z-20 text-foreground">Contact Us!</h1>
+        <h1 className="text-4xl md:text-8xl font-bold z-20 text-foreground">
+          Contact Us!
+        </h1>
       </section>
       <section className="py-20">
         <Container>

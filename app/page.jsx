@@ -19,7 +19,7 @@ export default function Home() {
           <h1 className="text-5xl sm:text-7xl whitespace-nowrap md:text-8xl w-full ml-2 md:w-[850px] lg:scale-125 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-3/4 font-bold">
             <FadeInRight>C R E A T I V I T Y</FadeInRight>
           </h1>
-          <div className="absolute w-[300px] top-1/2 left-4 md:left-[15%] transform -translate-y-1/2 z-50  mt-[300px] md:mt-0">
+          <div className="absolute w-[300px] top-1/2 left-4 md:left-[15%] transform -translate-y-1/2 z-30  mt-[300px] md:mt-0">
             <FadeInLeft>
               <h2 className="text-xl font-bold">
                 Interactive Digital Installations

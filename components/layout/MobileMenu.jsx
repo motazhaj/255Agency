@@ -39,7 +39,7 @@ const MobileMenu = ({items, isHomePage}) => {
           ></div>
         )}
         <motion.div
-          className="absolute top-0 z-50 w-5/6 right-0 max-w-screen-sm h-[100svh] bg-foreground text-primary"
+          className="absolute top-0 z-[100] w-5/6 right-0 max-w-screen-sm h-[100svh] bg-foreground text-primary"
           initial={{ x: "100%" }}
           animate={isMenuOpen ? { x: 0 } : { x: "100%" }}
           exit={{ x: "100%" }}
