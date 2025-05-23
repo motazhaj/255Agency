@@ -5,7 +5,7 @@ import React from "react";
 const ServicesSection = () => {
   return (
     <section id="services" className="flex flex-col gap-8 scroll-mt-24">
-      <h2 className="text-4xl md:text-[70px] max-h-[110px] overflow-hidden flex items-center bg-background/30 text-foreground animate-pulse min-w-[3000px] tracking-[.25em]">
+      <h2 className="text-5xl md:text-[70px] h-[100px] overflow-hidden flex items-center bg-background/30 text-foreground animate-pulse min-w-[3000px] tracking-[.25em]">
         E-SERVICES-SERVICES-SERVICES-SERVICES-SERVICES
       </h2>
       <ul>

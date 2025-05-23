@@ -35,7 +35,7 @@ const PortfolioSection = () => {
   return (
     <section className="flex flex-col gap-8">
       <FadeIn>
-        <h2 className="text-4xl md:text-[70px] max-h-[110px] overflow-hidden flex items-center bg-background/30 -mt-12 animate-pulse min-w-[3000px] tracking-[.25em]">
+        <h2 className="text-5xl md:text-[70px] h-[100px] overflow-hidden flex items-center bg-background/30 -mt-12 animate-pulse min-w-[3000px] tracking-[.25em]">
           O-PORTFOLIO-PORTFOLIO-PORTFOLIO-PORTFOLIO
         </h2>
       </FadeIn>
