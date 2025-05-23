@@ -1,4 +1,4 @@
-import { servicesNav } from "@/data/data";
+import { servicesData } from "@/data/data";
 import Link from "next/link";
 import React from "react";
 
@@ -9,9 +9,9 @@ const ServicesSection = () => {
         E-SERVICES-SERVICES-SERVICES-SERVICES-SERVICES
       </h2>
       <ul>
-        {servicesNav.map((item, index) => (
+        {servicesData.map((item, index) => (
           <li key={index}>
-            <ServiceItem title={item.title} link={"/services" + item.link} />
+            <ServiceItem title={item.title} link={"/services/" + item.slug} />
           </li>
         ))}
       </ul>
