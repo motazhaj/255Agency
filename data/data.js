@@ -24,7 +24,7 @@ export const navMenu2 = [
   },
   {
     name: "Blog",
-    href: "/",
+    href: "/blog",
   },
 ];
 

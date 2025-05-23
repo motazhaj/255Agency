@@ -1,13 +1,16 @@
-import PageOverlayed from '@/components/layout/PageOverlayed'
-import PageHeader from '@/components/PageHeader'
+import Container from '@/components/layout/Container'
 import React from 'react'
 
-const page = () => {
+const BlogPage = () => {
   return (
-    <PageOverlayed>
-     <PageHeader text="Latest from 255" subtext="Stay up-to-date with our latest blog posts."/>
-    </PageOverlayed>
+    <section className="bg-foreground min-h-[calc(100vh-500px)] pt-80">
+      <Container className={"flex flex-col gap-8"}>
+        <h1 className="text-4xl font-bold text-primary">Blog Coming Soon...</h1>
+      </Container>
+    </section>
   )
 }
 
-export default page
+export default BlogPage
+
+
