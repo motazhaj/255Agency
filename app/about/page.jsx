@@ -70,16 +70,16 @@ const page = () => {
             communication—we can be a catalyst for cultural, social, and
             economic development in Palestine and beyond.
           </p>
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-4 w-full">
             <img
               src="https://placehold.co/700x600"
               alt="about us image"
-              className="w-full mt-24 rounded-lg"
+              className="mt-24 rounded-lg w-1/2"
             />
             <img
               src="https://placehold.co/700x600"
               alt="about us image"
-              className="w-full mt-24 rounded-lg"
+              className="mt-24 rounded-lg w-1/2"
             />
           </div>
         </Container>
