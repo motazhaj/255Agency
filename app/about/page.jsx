@@ -7,7 +7,7 @@ const page = () => {
     <div className="min-h-[calc(100vh-500px)] bg-foreground py-24">
       <section className="h-[700px] bg-primary flex flex-col justify-center items-center overflow-hidden relative">
         <Image
-          className="absolute w-screen"
+          className="absolute w-screen bottom-0"
           src="/designs/heroPattern.png"
           width={2000}
           height={1000}
