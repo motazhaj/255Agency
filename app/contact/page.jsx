@@ -31,7 +31,7 @@ const ContactPage = () => {
                     target="_blank"
                   >
                     <FaWhatsapp size={24} />
-                    <p className="text-2xl">{contactInfo[0].email}</p>
+                    <p className="text-2xl">{contactInfo[0].phone}</p>
                   </Link>
                 </li>
                 <li className="flex items-center space-x-2">
@@ -41,7 +41,7 @@ const ContactPage = () => {
                     target="_blank"
                   >
                     <MdEmail size={28} />
-                    <p className="text-2xl">{contactInfo[0].phone}</p>
+                    <p className="text-2xl">{contactInfo[0].email}</p>
                   </Link>
                 </li>
               </ul>
