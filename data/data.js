@@ -28,31 +28,37 @@ export const navMenu2 = [
   },
 ];
 
-export const servicesNav = [
+export const servicesData = [
   {
     title: "SOCIAL MEDIA",
-    link: "/social-media",
+    slug: "social-media",
+    description: "",
   },
   {
     title: "VIDEO PRODUCTION",
-    link: "/video-production",
+    slug: "video-production",
+    description: "",
   },
   {
     title: "PHOTOGRAPHY",
-    link: "/photography",
+    slug: "photography",
+    description: "",
   },
 
   {
     title: "MARKETING",
-    link: "/marketing-campaigns",
+    slug: "marketing-campaigns",
+    description: "",
   },
   {
     title: "Printables",
-    link: "/printables",
+    slug: "printables",
+    description: "",
   },
   {
     title: "Events",
-    link: "/events",
+    slug: "events",
+    description: "",
   },
 ];
 
@@ -73,6 +79,56 @@ export const clientsData = [
     descriptionAr:
       "HULK! في 255 مصنع الإبداع، نحول القوة إلى فن مع 🔥 \nنفتخر بشراكتنا مع سلسلة مطاعم Hulk Burger حيث نقود إدارة التسويق الرقمي، والحملات الإعلانية، والهوية البصرية، بالإضافة إلى بناء المحتوى، والتصوير، والمونتاج",
   },
+  {
+    slug: "akko-group",
+    title: "Akko Group",
+    description:
+      "We're proud to have led the visual identity design for the global company, AKKO Group — crafting a brand image that speaks to their strength, innovation, and international presence. \nYour brand deserves more than just a logo — it deserves a full identity that tells your story, connects with your audience, and stands out in today's competitive market.\nAt 255, we combine creativity, strategy, and technical expertise to bring your brand to life. From concept to execution, we work with passion and precision to build a powerful, cohesive brand identity that aligns with your goals and vision.",
+  },
+  {
+    slug: "chicken-crush",
+    title: "Chicken Crush",
+    description:
+      "Our partnership with Chicken Crush began in 2024, driven by a shared vision to establish a bold presence in Nazareth's competitive food scene through strategic, high-impact advertising. Building on early momentum, we expanded our efforts in late 2025, setting our sights on the growing demand in surrounding areas. To ensure continued growth and measurable results, our 2024 marketing strategy was structured into four distinct quarters, enabling us to execute a comprehensive, budget-conscious plan—primarily fueled by targeted social media advertising",
+    descriptionAr:
+      "شركة 255 - وراء الهوية الجريئة لـ 'تشكن كرش قدمنا لمطعم 'تشكن كرش في الناصرة هوية بصرية نابضة بالحياة تعكس حيوية المطعم ونكهاته الغنية. من تصميم الشعار إلى الألوان الجريئة، خلقنا تجربة بصرية تجعل كل زيارة لا تُنسى.",
+  },
+  {
+    slug: "mono-pizza",
+    title: "Mono Pizza",
+    descriptionAr:
+      "من العجينة للطعم للمكان البيتزا من تتجاوز حدود الزمان بعض من اعمالنا في إدارة التسويق والحملات الإعلانية",
+  },
+  {
+    slug: "sherlock-pizza",
+    title: "Sherlock Pizza",
+    descriptionAr:
+      "بناء هوية بصرية متميزة تصاميم شعار وباكيجات وطباعتها بأعلى جودة  عندما يتلاقى الفن بالإثارة و الغموض 255 تأخدكم بكل مرة الى عالم جديد من الإبداع و التألق 💫و انتظروا المزيد ",
+  },
+  {
+    slug: "chikinn",
+    title: "Chikinn",
+    descriptionAr:
+      "عمالنا للأصدقاء سلسلة مطاعم في مدينة الناصرة الحبيبة بناء شعار و هوية بصرية متميزة  - تصاميم باكيجات وطباعتها باعلى جودة🧡متجددة، تصاميم عصرية ملهمة ",
+  },
+  {
+    slug: "ekleel-al-ward",
+    title: "Ekleel Al-Ward",
+    descriptionAr:
+      "الورد وأعمالنا توأمان كلاهما يبهرانك من النظرة واللمسة الأولى استمتعوا برؤية أعمالنا الممزوجة باللمسة السحرية لعميلنا وشريك النجاح اكليل الورد-Ekleel Alward",
+  },{
+    slug: "one-piece",
+    title: "One Piece",
+  },{
+    slug:"fareed-zamano",
+    title: "Fareed Zamano"
+  },{
+    slug: "rexos-restaurant-cafe",
+    title: "Rexos Restaurant & Cafe"
+  },{
+    slug: "abusair-pastries",
+    title: "AbuSair Pastries"
+  }
 ];
 
 export const contactInfo = [

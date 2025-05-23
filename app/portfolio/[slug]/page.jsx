@@ -22,10 +22,10 @@ const ClientPortfolioPage = ({ params }) => {
     <section className="flex flex-col gap-8 pt-32 bg-foreground text-primary whitespace-pre-line text-center">
       <Container className={"mb-32"}>
         {clientData && (
-          <div className="flex flex-col gap-8 mb-8 p-8 text-xl">
-            <h1 className="text-4xl font-bold">{clientData.title}</h1>
-            <p>{clientData.description}</p>
-            <p>{clientData.descriptionAr}</p>
+          <div className="flex flex-col gap-8 mb-8 py-4 text-xl">
+            <h1 className="text-4xl font-bold text-start">{clientData.title}</h1>
+            {/* <p>{clientData.description}</p>
+            <p>{clientData.descriptionAr}</p> */}
           </div>
         )}
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 flex-wrap justify-center">

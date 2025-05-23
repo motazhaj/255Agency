@@ -31,8 +31,8 @@ const servicePreviewPage = ({ params }) => {
     <section className="flex flex-col gap-8 pt-32 bg-foreground text-primary whitespace-pre-line text-center">
       <Container className={"mb-32"}>
         {serviceData && (
-          <div className="flex flex-col gap-8 mb-8 p-8 text-xl">
-            <h1 className="text-5xl font-bold">{serviceData.title}</h1>
+          <div className="flex flex-col gap-8 mb-8 py-6 text-xl">
+            <h1 className="text-5xl font-bold text-start">{serviceData.title}</h1>
             {/* <p>{serviceData.description}</p> */}
           </div>
         )}
