@@ -176,9 +176,7 @@ export default function Home() {
           height={1080}
           className="w-full drop-shadow-xl"
         />
-        <Container>
-          <h2 className="text-5xl font-bold mb-8 mt-20">Our Team</h2>
-        </Container>
+
         <Image
           src="/designs/ourTeam.png"
           alt="255 Team"
