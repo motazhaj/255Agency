@@ -20,13 +20,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #404040; /* Background of the scrollbar track */
+  background: #ededed; /* Background of the scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #ff3600; /* Color of the scrollbar thumb */
   border-radius: 10px; /* Rounded corners */
-  border: 2px solid #404040; /* Adds padding around the thumb */
+  border: 2px solid #ededed; /* Adds padding around the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
