@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
 
+  const isHomePage = pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -24,8 +25,8 @@ const Navbar = () => {
   }, []);
   return (
     <header
-      className={`z-50 w-full h-24 py-4 fixed backdrop-blur-lg duration-500 ${
-        pathname === "/" || isScrolled ? "  " : "text-primary "
+      className={`z-50 w-screen h-24 py-4 fixed backdrop-blur-lg duration-500 ${
+        isHomePage || isScrolled ? "  " : "text-primary "
       } ${isScrolled ? "bg-black/50 text-foreground" : " "} `}
     >
       <div className={"h-[70px] flex items-center max-w-screen-xl mx-auto"}>
@@ -36,13 +37,15 @@ const Navbar = () => {
             href="/"
             className="w-2/6 flex items-center gap-1 hover:scale-110 duration-300 px-4 py-2"
           >
-            {pathname === "/" || isScrolled ? (
+            {isHomePage || isScrolled ? (
               <Image
                 src="/255-logo-white.svg"
                 alt="logo"
                 width={120}
                 height={120}
-                className={`mx-auto duration-200 ${isScrolled ? "size-[100px] " : "mt-3 size-[130px]"}`}
+                className={`mx-auto duration-200 ${
+                  isScrolled ? "size-[100px] " : "mt-3 size-[130px]"
+                }`}
               />
             ) : (
               <Image
@@ -50,14 +53,19 @@ const Navbar = () => {
                 alt="logo"
                 width={70}
                 height={70}
-                className={`mx-auto duration-200 ${isScrolled ? "size-[100px] " : "mt-3 size-[130px]"}`}
+                className={`mx-auto duration-200 ${
+                  isScrolled ? "size-[100px] " : "mt-3 size-[130px]"
+                }`}
               />
             )}
           </Link>
 
           <NavMenu items={navMenu2} isScrolled={isScrolled} />
           <nav className="md:hidden">
-            <MobileMenu items={navMenu1.concat(navMenu2)} />
+            <MobileMenu
+              items={navMenu1.concat(navMenu2)}
+              isHomePage={isHomePage}
+            />
           </nav>
         </div>
       </div>

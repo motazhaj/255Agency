@@ -25,7 +25,7 @@ const Footer = () => {
           </FadeIn>
         </div>
       )}
-      <footer className="w-full mt-12 z-10 py-4 bg-primary">
+      <footer className="w-screen mt-12 z-10 py-4 bg-primary">
         <Container className="flex">
           <div className="p-12 min-h-[200px] w-full flex flex-col">
             <div className="w-full flex items-start justify-between">
@@ -48,7 +48,7 @@ const Footer = () => {
                   design meets technology
                 </p>
               </div>
-              <nav className="w-1/3 ml-4 lg:ml-32 flex gap-24">
+              <nav className="w-1/3 ml-4 lg:ml-32 flex flex-col md:flex-row gap-8 md:gap-24">
                 <ul className="gap-4 flex flex-col">
                   {navMenu1.map((item) => (
                     <li key={item.name}>
