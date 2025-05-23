@@ -28,6 +28,34 @@ export const navMenu2 = [
   },
 ];
 
+export const servicesNav = [
+  {
+    title: "SOCIAL MEDIA",
+    link: "/social-media",
+  },
+  {
+    title: "VIDEO PRODUCTION",
+    link: "/video-production",
+  },
+  {
+    title: "PHOTOGRAPHY",
+    link: "/photography",
+  },
+
+  {
+    title: "MARKETING",
+    link: "/marketing-campaigns",
+  },
+  {
+    title: "Printables",
+    link: "/printables",
+  },
+  {
+    title: "Events",
+    link: "/events",
+  },
+];
+
 export const clientsData = [
   {
     slug: "grand-nablus-bus-co",
