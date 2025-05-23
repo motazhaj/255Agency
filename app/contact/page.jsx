@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhone } from "react-icons/fa6";
+import { FaPhone, FaWhatsapp } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 import Container from "@/components/layout/Container";
@@ -23,7 +23,6 @@ const ContactPage = () => {
           <section className="bg-gradient-to-t rounded-2xl bg-primary text-foreground mb-4 p-4">
             <div className="text-center pt-8">
               <h2 className="text-4xl font-bold">Contact Info!</h2>
-
               <ul className="flex gap-8 justify-center">
                 <li>
                   <Link
@@ -31,7 +30,7 @@ const ContactPage = () => {
                     className="flex items-center space-x-2 hover:scale-110 duration-200"
                     target="_blank"
                   >
-                    <FaPhone size={24} />
+                    <FaWhatsapp size={24} />
                     <p className="text-2xl">{contactInfo[0].email}</p>
                   </Link>
                 </li>
