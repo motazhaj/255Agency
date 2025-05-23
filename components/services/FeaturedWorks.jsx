@@ -64,7 +64,7 @@ const FeaturedWorks = () => {
   return (
     <section className="bg-foreground text-primary py-12">
       <Container>
-        <h3 className="text-5xl font-bold">Featrued Works</h3>
+        <h3 className="text-4xl md:text-6xl font-bold">Featrued Works</h3>
         {featuredWorks.map((item, index) => (
           <FeaturedWorkCard key={index} {...item} />
         ))}
@@ -75,8 +75,8 @@ const FeaturedWorks = () => {
 
 const FeaturedWorkCard = ({ title, images }) => {
   return (
-    <div className="flex flex-col gap-4 my-6 p-4 w-full rounded-xl">
-      <h3 className="text-5xl font-bold text-primary">{title}</h3>
+    <div className="flex flex-col gap-4 my-6 py-4 w-full rounded-xl">
+      <h3 className="text-3xl md:text-5xl font-bold text-primary">{title}</h3>
       <ul className="flex gap-4 w-full py-4 overflow-x-scroll">
         {images.map((item, index) => (
           <li key={index}>

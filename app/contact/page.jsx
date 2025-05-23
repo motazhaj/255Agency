@@ -11,16 +11,16 @@ const ContactPage = () => {
     <div className="min-h-[calc(100vh-500px)] bg-foreground text-background py-24">
       <section className="h-[300px] bg-primary flex flex-col justify-center items-center overflow-hidden relative drop-shadow-lg">
         <Image
-          className="absolute w-screen bottom-0"
+          className="absolute w-screen object-cover bottom-0"
           src="/designs/heroPattern.png"
           width={2000}
           height={1000}
         />
-        <h1 className="text-8xl font-bold z-20 text-foreground">Contact Us!</h1>
+        <h1 className="text-4xl md:text-8xl font-bold z-20 text-foreground">Contact Us!</h1>
       </section>
       <section className="py-20">
         <Container>
-          <section className="bg-gradient-to-t rounded-2xl bg-primary text-foreground mb-4 p-4">
+          <section className="bg-gradient-to-t rounded-2xl bg-primary text-foreground mb-4 p-4 drop-shadow-lg">
             <div className="text-center pt-8">
               <h2 className="text-4xl font-bold">Contact Info!</h2>
               <ul className="flex gap-8 justify-center">
@@ -61,7 +61,7 @@ const ContactPage = () => {
               </div>
             </div>
           </section>
-          <section className="text-foreground">
+          <section className="text-foreground drop-shadow-lg">
             <div className="flex flex-col lg:flex-row justify-start gap-4">
               {contactInfo.map((location, index) => (
                 <div

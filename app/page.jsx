@@ -16,10 +16,10 @@ export default function Home() {
     <>
       <FadeIn>
         <section className="relative flex flex-col justify-center py-20 min-h-screen">
-          <h1 className="text-8xl w-[850px] lg:scale-125 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-3/4 font-bold">
+          <h1 className="text-5xl sm:text-7xl whitespace-nowrap md:text-8xl w-full ml-2 md:w-[850px] lg:scale-125 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-3/4 font-bold">
             <FadeInRight>C R E A T I V I T Y</FadeInRight>
           </h1>
-          <div className="absolute w-[300px] top-1/2 left-[20%] transform -translate-y-1/2 z-20">
+          <div className="absolute w-[300px] top-1/2 left-4 md:left-[15%] transform -translate-y-1/2 z-50  mt-[300px] md:mt-0">
             <FadeInLeft>
               <h2 className="text-xl font-bold">
                 Interactive Digital Installations
@@ -30,7 +30,7 @@ export default function Home() {
                 experiences.
               </p>
               <div className="flex gap-2">
-                <LinkButtonFill href="/services" className="mt-8">
+                <LinkButtonFill href="/#services" className="mt-8">
                   Services
                   <FaArrowCircleRight size={24} className="ml-2" />
                 </LinkButtonFill>
@@ -41,7 +41,7 @@ export default function Home() {
               </div>
             </FadeInLeft>
           </div>
-          <div className="absolute w-[300px] top-1/2 right-[20%] transform -translate-y-1/2 z-20">
+          <div className="absolute w-[300px] top-1/2 left-4 md:left-0 md:right-[10%] transform -translate-y-1/2 z-20">
             <FadeInRight>
               <div>
                 <h3 className="text-6xl">90%</h3>
@@ -73,7 +73,7 @@ export default function Home() {
                 alt="logo"
                 width={600}
                 height={900}
-                className="h-[90dvh] drop-shadow-xl object-contain mx-auto"
+                className="h-[90dvh] min-w-[300px] drop-shadow-xl object-contain mx-auto"
               />
             </FadeInBottom>
           </div>
@@ -83,7 +83,7 @@ export default function Home() {
               alt="logo"
               width={200}
               height={100}
-              className="h-[100px] object-contain mx-auto  animate-bounce"
+              className="h-[40px] md:h-[100px] object-contain mx-auto  animate-bounce"
             />
           </div>
           <div className="absolute w-[300px] top-3/4 right-[20%] transform -translate-y-1/2 z-20 -rotate-12">
@@ -92,7 +92,7 @@ export default function Home() {
               alt="logo"
               width={200}
               height={100}
-              className="h-[100px] object-contain mx-auto  animate-bounce"
+              className="h-[40px] md:h-[100px] object-contain mx-auto  animate-bounce"
             />
           </div>
         </section>
@@ -102,7 +102,7 @@ export default function Home() {
         <section>
           <Container>
             <iframe
-              className="w-full aspect-video mx-auto rounded-xl overflow-hidden drop-shadow-xl my-32"
+              className="w-full min-h-[500px] aspect-video mx-auto rounded-xl overflow-hidden drop-shadow-xl my-24"
               src="https://www.youtube.com/embed/45TdhcZU4Mw?si=VKNA-RG2yfRIo5jQ"
               title="YouTube video player"
               frameborder="0"
@@ -116,16 +116,18 @@ export default function Home() {
 
       <FadeIn>
         <section className="flex flex-col gap-4 justify-center items-center bg-foreground text-primary py-8">
-          <h3 className="text-3xl font-bold">255 Who?</h3>
-          <p className="text-xl max-w-screen-lg text-center">
-            We are a digital-focused Palestine-based studio. Our
-            multidisciplinary team of freelancers and an A.. multiplies creative
-            results and helps brands flourish.
-          </p>
+          <Container>
+            <h3 className="text-3xl font-bold text-center">255 Who?</h3>
+            <p className="text-xl max-w-screen-md text-center mx-auto">
+              We are a digital-focused Palestine-based studio. Our
+              multidisciplinary team of freelancers and an A.. multiplies
+              creative results and helps brands flourish.
+            </p>
+          </Container>
         </section>
       </FadeIn>
 
-      <section className="relative min-h-screen scale-[60%] lg:scale-75 xl:scale-90 my-32">
+      <section className="relative min-h-screen scale-50 lg:scale-75 xl:scale-90 my-32">
         <div className="absolute left-1/2 -translate-x-1/2 z-50 size-[800px] bg-foreground rounded-full flex justify-center items-center px-40">
           <p className="text-[150px] leading-[150px] font-bold text-primary text-center">
             MAKE YOUR AD
@@ -153,13 +155,15 @@ export default function Home() {
 
       <FadeIn>
         <section className="flex flex-col gap-4 justify-center items-center my-32">
-          <h3 className="text-3xl font-bold">
-            Capture, Communicate, and Connect.
-          </h3>
-          <p className="text-xl text-foreground/80 max-w-screen-lg text-center">
-            we create impactful graphics that convey your brand's message and
-            resonate with your audience, from logos to marketing materials.
-          </p>
+          <Container>
+            <h3 className="text-3xl font-bold text-center">
+              Capture, Communicate, and Connect.
+            </h3>
+            <p className="text-xl text-foreground/80 text-center max-w-screen-md mx-auto">
+              we create impactful graphics that convey your brand's message and
+              resonate with your audience, from logos to marketing materials.
+            </p>
+          </Container>
         </section>
       </FadeIn>
 

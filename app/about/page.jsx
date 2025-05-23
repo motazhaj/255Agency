@@ -5,15 +5,21 @@ import React from "react";
 const page = () => {
   return (
     <div className="min-h-[calc(100vh-500px)] bg-foreground py-24">
-      <section className="h-[700px] bg-primary flex flex-col justify-center items-center overflow-hidden relative">
+      <section className="h-[400px] md:h-[700px] bg-primary flex flex-col drop-shadow-lg justify-center items-center overflow-hidden relative">
         <Image
-          className="absolute w-screen bottom-0"
+          className="absolute min-w-screen h-[200px] object-cover bottom-0"
           src="/designs/heroPattern.png"
           width={2000}
           height={1000}
         />
-        <h1 className="text-8xl font-bold z-20">UNLEASH BOLD IDEAS</h1>
-        <p className="text-5xl pt-2 z-20">CREATE THE UNEXPECTED</p>
+        <Container className={"z-10"}>
+          <h1 className="text-4xl md:text-8xl font-bold z-20">
+            UNLEASH BOLD IDEAS
+          </h1>
+          <p className="text-2xl md:text-5xl pt-2 z-20">
+            CREATE THE UNEXPECTED
+          </p>
+        </Container>
       </section>
       <section className="py-24">
         <Container>
@@ -38,7 +44,7 @@ const page = () => {
           <img
             src="https://placehold.co/1300x600"
             alt="about us image"
-            className="w-full my-24 rounded-lg"
+            className="w-full min-h-[400px] object-cover my-24 rounded-lg"
           />
           <p className="text-2xl text-primary">
             At 255 Advertising Agency, social and environmental responsibility
@@ -70,16 +76,16 @@ const page = () => {
             communication—we can be a catalyst for cultural, social, and
             economic development in Palestine and beyond.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 w-full">
+          <div className="flex flex-col md:flex-row gap-4 w-full mt-24">
             <img
               src="https://placehold.co/700x600"
               alt="about us image"
-              className="mt-24 rounded-lg w-1/2"
+              className="rounded-lg  min-h-[400px] object-cover md:w-1/2"
             />
             <img
               src="https://placehold.co/700x600"
               alt="about us image"
-              className="mt-24 rounded-lg w-1/2"
+              className="rounded-lg  min-h-[400px] object-cover md:w-1/2"
             />
           </div>
         </Container>

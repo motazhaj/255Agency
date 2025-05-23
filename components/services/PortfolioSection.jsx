@@ -35,13 +35,13 @@ const PortfolioSection = () => {
   return (
     <section className="flex flex-col gap-8">
       <FadeIn>
-        <h2 className="text-[70px] max-h-[110px] overflow-hidden flex items-center bg-background/30 -mt-12 animate-pulse min-w-[3000px] tracking-[.25em]">
+        <h2 className="text-4xl md:text-[70px] max-h-[110px] overflow-hidden flex items-center bg-background/30 -mt-12 animate-pulse min-w-[3000px] tracking-[.25em]">
           O-PORTFOLIO-PORTFOLIO-PORTFOLIO-PORTFOLIO
         </h2>
       </FadeIn>
       <Container className={"mb-32"}>
         <FadeInBottom>
-          <ul className="flex gap-8 justify-center">
+          <ul className="flex flex-wrap gap-8 justify-center">
             {portfolioItems.map((item, index) => (
               <li key={index}>
                 <PortfolioItemCard
@@ -61,7 +61,7 @@ const PortfolioSection = () => {
             View Portfolio
             <FaArrowCircleRight size={24} className="ml-2" />
           </LinkButtonFill>
-        </  FadeInLeft>
+        </FadeInLeft>
       </Container>
     </section>
   );
