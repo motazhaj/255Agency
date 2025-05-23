@@ -41,7 +41,7 @@ export default function Home() {
               </div>
             </FadeInLeft>
           </div>
-          <div className="absolute w-[300px] top-1/2 left-4 md:left-0 md:right-[10%] transform -translate-y-1/2 z-20">
+          <div className="absolute w-[300px] top-1/2 ml-4 md:ml-0 md:right-[10%] transform -translate-y-1/2 z-20">
             <FadeInRight>
               <div>
                 <h3 className="text-6xl">90%</h3>
