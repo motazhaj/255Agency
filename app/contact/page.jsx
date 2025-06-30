@@ -68,7 +68,7 @@ const ContactPage = () => {
               {contactInfo.map((location, index) => (
                 <div
                   key={index}
-                  className="lg:w-1/3 bg-primary text-foreground rounded-2xl p-8 flex flex-col gap-4"
+                  className="lg:w-1/2 bg-primary text-foreground rounded-2xl p-8 flex flex-col gap-4"
                 >
                   <h2 className="text-4xl font-bold text-foreground">
                     {location.name}

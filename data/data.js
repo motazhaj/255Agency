@@ -116,26 +116,29 @@ export const clientsData = [
     title: "Ekleel Al-Ward",
     descriptionAr:
       "الورد وأعمالنا توأمان كلاهما يبهرانك من النظرة واللمسة الأولى استمتعوا برؤية أعمالنا الممزوجة باللمسة السحرية لعميلنا وشريك النجاح اكليل الورد-Ekleel Alward",
-  },{
+  },
+  {
     slug: "one-piece",
     title: "One Piece",
-  },{
-    slug:"fareed-zamano",
-    title: "Fareed Zamano"
-  },{
+  },
+  {
+    slug: "fareed-zamano",
+    title: "Fareed Zamano",
+  },
+  {
     slug: "rexos-restaurant-cafe",
-    title: "Rexos Restaurant & Cafe"
-  },{
+    title: "Rexos Restaurant & Cafe",
+  },
+  {
     slug: "abusair-pastries",
-    title: "AbuSair Pastries"
-  }
+    title: "AbuSair Pastries",
+  },
 ];
 
 export const contactInfo = [
   {
     name: "255 Nablus",
-    address:
-      "Al basateen st. - saad al deen building - 2nd floor 970 Nablus, Palestine",
+    address: "Al basateen st. - saad al deen building - 2nd floor 970 Nablus, Palestine",
     phone: "+972 56-625-5255",
     email: "255@255.ps",
     whatsappLink: "https://wa.me/972566255255",
@@ -145,9 +148,5 @@ export const contactInfo = [
   {
     name: "255 Nazareth",
     address: "Tech Hub Tower, 5th Floor, Al-Masyoun, Ramallah",
-  },
-  {
-    name: "255 Dubai",
-    address: "Business Bay Tower, Suite 800, Dubai, UAE",
   },
 ];
