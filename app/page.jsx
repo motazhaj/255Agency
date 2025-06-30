@@ -21,13 +21,10 @@ export default function Home() {
           </h1>
           <div className="absolute w-[300px] top-1/2 left-4 md:left-[15%] transform -translate-y-1/2 z-30  mt-[300px] md:mt-0">
             <FadeInLeft>
-              <h2 className="text-xl font-bold">
-                Interactive Digital Installations
-              </h2>
+              <h2 className="text-xl font-bold">Interactive Digital Installations</h2>
               <p className="mt-8 text-foreground/80">
-                Our team of forward-thinking designers, strategists, and
-                innovators is dedicated to transforming ideas into exceptional
-                experiences.
+                Our team of forward-thinking designers, strategists, and innovators is dedicated to
+                transforming ideas into exceptional experiences.
               </p>
               <div className="flex gap-2">
                 <LinkButtonFill href="/#services" className="mt-8">
@@ -45,9 +42,7 @@ export default function Home() {
             <FadeInRight>
               <div>
                 <h3 className="text-6xl">90%</h3>
-                <p className="text-xl text-foreground/80">
-                  Customer Satisfaction
-                </p>
+                <p className="text-xl text-foreground/80">Customer Satisfaction</p>
               </div>
               <div className="mt-8">
                 <h3 className="text-6xl">240+</h3>
@@ -97,18 +92,16 @@ export default function Home() {
           </div>
         </section>
       </FadeIn>
-
       <FadeInBottom>
         <section>
           <Container>
             <iframe
               className="w-full min-h-[500px] aspect-video mx-auto rounded-xl overflow-hidden drop-shadow-xl my-24"
-              src="https://www.youtube.com/embed/45TdhcZU4Mw?si=VKNA-RG2yfRIo5jQ"
+              src="https://www.youtube.com/embed/OhHfUAelvWo?si=nHFRpK4xNLgnPtaq&autoplay=1&mute=1"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             ></iframe>
           </Container>
         </section>
@@ -119,9 +112,8 @@ export default function Home() {
           <Container>
             <h3 className="text-3xl font-bold text-center">255 Who?</h3>
             <p className="text-xl max-w-screen-md text-center mx-auto">
-              We are a digital-focused Palestine-based studio. Our
-              multidisciplinary team of freelancers and an A.. multiplies
-              creative results and helps brands flourish.
+              We are a digital-focused Palestine-based studio. Our multidisciplinary team of
+              freelancers and an A.. multiplies creative results and helps brands flourish.
             </p>
           </Container>
         </section>
@@ -156,12 +148,10 @@ export default function Home() {
       <FadeIn>
         <section className="flex flex-col gap-4 justify-center items-center my-32">
           <Container>
-            <h3 className="text-3xl font-bold text-center">
-              Capture, Communicate, and Connect.
-            </h3>
+            <h3 className="text-3xl font-bold text-center">Capture, Communicate, and Connect.</h3>
             <p className="text-xl text-foreground/80 text-center max-w-screen-md mx-auto">
-              we create impactful graphics that convey your brand's message and
-              resonate with your audience, from logos to marketing materials.
+              we create impactful graphics that convey your brand's message and resonate with your
+              audience, from logos to marketing materials.
             </p>
           </Container>
         </section>
