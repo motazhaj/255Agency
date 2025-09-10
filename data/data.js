@@ -147,7 +147,12 @@ export const contactInfo = [
   },
   {
     name: "255 Nazareth",
-    address: "Nazareh -Nof HaGalil",
-    phone: "+972 0544681684"
+    address: "Mitham Mul Harim, Nof HaGalil 1754200, Israel",
+    phone: "+972 0544681684",
+  },
+  {
+    name: "255 Riyadh",
+    address: "Muruj District - Imam Saud bin Abdulaziz bin Mohammed Road, Riyadh, Saudi Arabia",
+    phone: "+966 59 981 7490",
   },
 ];
