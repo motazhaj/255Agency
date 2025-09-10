@@ -147,6 +147,7 @@ export const contactInfo = [
   },
   {
     name: "255 Nazareth",
-    address: "Tech Hub Tower, 5th Floor, Al-Masyoun, Ramallah",
+    address: "Nazareh -Nof HaGalil",
+    phone: "+972 0544681684"
   },
 ];

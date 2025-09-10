@@ -9,9 +9,7 @@ const ContactUsSection = () => {
   return (
     <section>
       <Container>
-        <h2 className="text-5xl md:text-9xl tracking-widest font-bold mb-8 mt-20">
-          Let's Connect
-        </h2>
+        <h2 className="text-5xl md:text-9xl tracking-widest font-bold mb-8 mt-20">Let's Connect</h2>
         <div className="text-center pt-8 flex gap-4 flex-col md:flex-row">
           <div className="bg-foreground rounded-xl p-4 w-full md:w-2/3">
             <iframe
@@ -26,8 +24,8 @@ const ContactUsSection = () => {
             <div>
               <h2 className="text-4xl font-bold ">Find Us Here</h2>
               <p className="mt-4 text-xl text-semibold text-back ground">
-                Our main headquarters is located in, Saad Eddin Building, 2nd
-                Floor, Al-Basateen, Nablus
+                Our main headquarters is located in, Saad Eddin Building, 2nd Floor, Al-Basateen,
+                Nablus
               </p>
             </div>
             <ul className="flex gap-8 justify-center">
@@ -58,10 +56,9 @@ const ContactUsSection = () => {
                   key={index}
                   className="bg-foreground drop-shadow-lg text-background rounded-2xl p-8 flex flex-col gap-4"
                 >
-                  <h2 className="text-4xl font-bold text-primary">
-                    {location.name}
-                  </h2>
+                  <h2 className="text-4xl font-bold text-primary">{location.name}</h2>
                   <p className="text-xl opacity-80">{location.address}</p>
+                  <p className="text-xl">{location.phone}</p>
                 </div>
               ))}
             </div>
