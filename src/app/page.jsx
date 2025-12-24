@@ -1,0 +1,411 @@
+import FadeIn from "@/components/animations/FadeIn";
+import FadeInBottom from "@/components/animations/FadeInBottom";
+import FadeInLeft from "@/components/animations/FadeInLeft";
+import FadeInRight from "@/components/animations/FadeInRight";
+import LinkButtonFill from "@/components/buttons/LinkButtonFill";
+import ContactUsSection from "@/components/ContactUsSection";
+import Container from "@/components/layout/Container";
+import FeaturedWorks from "@/components/services/FeaturedWorks";
+import PortfolioSection from "@/components/services/PortfolioSection";
+import ServicesSection from "@/components/services/ServicesSection";
+import ClientsGrid from "@/components/ClientsGrid";
+import TeamSection from "@/components/TeamSection";
+import ScrollVideo from "@/components/ScrollVideo";
+import SplashCursor from "@/components/SplashCursor";
+import Image from "next/image";
+import { ArrowRightCircle } from "lucide-react";
+
+export default function Home() {
+  return (
+    <>
+      <SplashCursor />
+      <FadeIn>
+        <section className="relative min-h-screen overflow-visible lg:overflow-hidden">
+          {/* Modern Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#ff5722] -z-20" />
+          
+          {/* Subtle Decorative Arc Elements */}
+          <div className="absolute inset-0 -z-10 overflow-hidden">
+            {/* Large Arc - Top Left */}
+            <div className="absolute -left-96 top-32 w-[800px] h-[800px]">
+              <div className="w-full h-full border-[60px] md:border-[120px] border-white/8 rounded-full" />
+            </div>
+            
+            {/* Large Arc - Top Right */}
+            <div className="absolute -right-80 top-40 w-[900px] h-[900px]">
+              <div className="w-full h-full border-[70px] md:border-[140px] border-white/10 rounded-full" />
+            </div>
+            
+            {/* Medium Arc - Bottom Center */}
+            <div className="absolute left-1/4 -bottom-48 w-[700px] h-[700px]">
+              <div className="w-full h-full border-[50px] md:border-[100px] border-white/9 rounded-full" />
+            </div>
+          </div>
+          
+          {/* Animated Gradient Orbs */}
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-3xl -z-10 animate-pulse" />
+          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-white/10 rounded-full blur-3xl -z-10 animate-pulse" style={{animationDelay: '1s'}} />
+          
+          {/* Pattern Overlay */}
+          <div className="absolute inset-0 -z-10 opacity-5">
+            <div className="absolute inset-0" style={{
+              backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+              backgroundSize: '50px 50px'
+            }} />
+          </div>
+
+          {/* Main Content Container - Fits Viewport */}
+          <div className="relative z-10 min-h-screen flex flex-col justify-start px-3 md:px-8 lg:px-16 py-12 md:py-24 pb-8 lg:pb-24">
+            
+            {/* Hero Title - Full Viewport Width */}
+            <div className="text-center mb-0 mt-24 md:mt-8 lg:mt-12 relative z-[5] w-full px-4">
+              <FadeInRight>
+                <div className="relative inline-block lg:w-full">
+                  {/* Mobile Only: Left Floating Glasses */}
+                  <div className="lg:hidden absolute -left-12 sm:-left-16 md:-left-20 top-1/2 -translate-y-1/2 animate-float -z-10">
+                    <Image
+                      src="/designs/glasses.webp"
+                      alt=""
+                      width={120}
+                      height={60}
+                      className="h-[40px] sm:h-[50px] md:h-[60px] w-auto object-contain opacity-90"
+                      aria-hidden="true"
+                      loading="lazy"
+                      quality={75}
+                    />
+                  </div>
+                  
+                  <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem] 2xl:text-[12rem] font-extrabold tracking-[0.2em] w-full" style={{ fontWeight: 800 }}>
+                    <span className="inline-block text-white/80 drop-shadow-lg">
+                      CREATIVITY
+                    </span>
+                  </h1>
+                  
+                  {/* Mobile Only: Right Floating Glasses */}
+                  <div className="lg:hidden absolute -right-12 sm:-right-16 md:-right-20 top-1/2 -translate-y-1/2 animate-float -z-10" style={{animationDelay: '0.5s'}}>
+                    <Image
+                      src="/designs/glasses.webp"
+                      alt=""
+                      width={120}
+                      height={60}
+                      className="h-[40px] sm:h-[50px] md:h-[60px] w-auto object-contain opacity-90"
+                      aria-hidden="true"
+                      loading="lazy"
+                      quality={75}
+                    />
+                  </div>
+                </div>
+              </FadeInRight>
+            </div>
+
+            {/* Mobile: Camel as Background - Layered */}
+            <FadeInBottom className="lg:hidden flex justify-center pointer-events-none relative z-[3]">
+              <div className="relative group">
+                <Image
+                  src="/designs/camel.webp"
+                  alt="255 Agency mascot - camel wearing sunglasses"
+                  width={600}
+                  height={900}
+                  className="relative h-[70vh] w-auto drop-shadow-2xl object-contain"
+                  priority
+                />
+              </div>
+            </FadeInBottom>
+
+            {/* Responsive Grid Layout - Green Spot */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 max-w-7xl mx-auto w-full relative lg:static -mt-[45vh] lg:mt-0 px-3 lg:px-0 z-[10]">
+              
+              {/* Left Card - Description with Liquid Glass Effect */}
+              <FadeInLeft>
+                <div className="relative">
+                  {/* Floating Glasses - Top Right Corner - Desktop Only */}
+                  <div className="hidden lg:block absolute -top-8 -right-8 md:-top-10 md:-right-10 lg:-top-12 lg:-right-12 animate-float z-50">
+                    <Image
+                      src="/designs/glasses.webp"
+                      alt=""
+                      width={120}
+                      height={60}
+                      className="h-[50px] sm:h-[60px] md:h-[70px] lg:h-[90px] w-auto object-contain opacity-95 drop-shadow-xl"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  
+                  <div className="group relative overflow-hidden rounded-xl md:rounded-3xl p-3 md:p-6 lg:p-8 transition-all duration-500 hover:scale-[1.02] z-20 lg:z-auto">
+                  {/* Liquid Glass Background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/[0.15] via-white/[0.08] to-white/[0.05] backdrop-blur-3xl" />
+                  
+                  {/* Animated Liquid Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/[0.2] via-transparent to-white/[0.1] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  
+                  {/* Shimmer Effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.15] to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  </div>
+                  
+                  {/* Border with Gradient */}
+                  <div className="absolute inset-0 rounded-xl md:rounded-3xl border border-white/[0.3] shadow-[0_8px_32px_0_rgba(255,255,255,0.18),inset_0_1px_0_0_rgba(255,255,255,0.25)]" />
+                  
+                  <div className="relative z-10">
+                    <div className="inline-flex items-center justify-center w-9 h-9 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-gradient-to-br from-white/[0.25] to-white/[0.15] backdrop-blur-xl mb-2 md:mb-4 shadow-[inset_0_2px_4px_0_rgba(255,255,255,0.4),0_4px_12px_rgba(0,0,0,0.1)]">
+                      <svg className="w-4 h-4 md:w-6 md:h-6 text-white drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    
+                    <h2 className="text-base md:text-xl lg:text-2xl font-bold mb-1.5 md:mb-3 text-white drop-shadow-sm">
+                      Interactive Digital Installations
+                    </h2>
+                    
+                    <p className="text-[11px] md:text-sm lg:text-base text-white/95 leading-relaxed mb-3 md:mb-6 text-justify">
+                      Our team of forward-thinking designers, strategists, and innovators is dedicated to transforming ideas into exceptional experiences.
+                    </p>
+                    
+                    <div className="flex flex-col xl:flex-row gap-2">
+                      <LinkButtonFill href="/#services" className="w-full xl:w-auto bg-white/95 text-primary shadow-lg relative overflow-hidden group/btn hover:bg-gradient-to-r hover:from-primary hover:to-[#ff5722] hover:text-white hover:shadow-[0_0_30px_rgba(255,87,34,0.6)] hover:scale-110 transition-all duration-500">
+                        <span className="relative z-10 transition-transform duration-500 group-hover/btn:scale-110">Services</span>
+                        <ArrowRightCircle size={16} className="ml-2 relative z-10 transition-all duration-500 group-hover/btn:translate-x-2 group-hover/btn:rotate-[360deg]" />
+                        <span className="absolute inset-0 bg-gradient-to-r from-primary via-[#ff5722] to-primary opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-xl"></span>
+                      </LinkButtonFill>
+                      <LinkButtonFill href="/contact" className="w-full xl:w-auto bg-white/[0.25] border border-white/50 backdrop-blur-xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3)] relative overflow-hidden group/contact hover:bg-white/90 hover:border-white hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] hover:scale-105 transition-all duration-500">
+                        <span className="relative z-10 transition-all duration-500 group-hover/contact:tracking-wider group-hover/contact:text-primary">Contact</span>
+                        <ArrowRightCircle size={16} className="ml-2 relative z-10 transition-all duration-500 group-hover/contact:translate-x-1 group-hover/contact:scale-125" />
+                        <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 -translate-x-full group-hover/contact:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                      </LinkButtonFill>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </FadeInLeft>
+              
+              {/* Mobile: 2-Column Stat Cards Grid - Now with z-index */}
+              <div className="lg:hidden order-first relative z-20">
+                <FadeInRight>
+                  <div className="grid grid-cols-2 gap-2">
+                    {/* Stat Card 1 - Customer Satisfaction with Liquid Glass */}
+                    <div className="group relative overflow-hidden rounded-xl lg:rounded-3xl p-2.5 md:p-5 lg:p-6 transition-all duration-500 hover:scale-[1.02]">
+                    {/* Floating Glasses - Top Center - Desktop Only */}
+                    <div className="hidden lg:block absolute -top-6 left-1/2 -translate-x-1/2 md:-top-8 animate-float z-50" style={{animationDelay: '0.5s'}}>
+                      <Image
+                        src="/designs/glasses.webp"
+                        alt=""
+                        width={120}
+                        height={60}
+                        className="h-[45px] sm:h-[50px] md:h-[60px] w-auto object-contain opacity-95 drop-shadow-xl"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    
+                    {/* Liquid Glass Background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.15] via-white/[0.08] to-white/[0.05] backdrop-blur-3xl" />
+                    
+                    {/* Animated Liquid Gradient with Yellow Tint */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-secondary/[0.15] via-white/[0.1] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    
+                    {/* Shimmer Effect */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.2] to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                    </div>
+                    
+                    {/* Border with Gradient */}
+                    <div className="absolute inset-0 rounded-xl lg:rounded-3xl border border-white/[0.3] shadow-[0_8px_32px_0_rgba(255,255,255,0.18),inset_0_1px_0_0_rgba(255,255,255,0.25)]" />
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-1 md:gap-3 mb-1 md:mb-3">
+                        <div className="w-1 h-1 md:w-2 md:h-2 rounded-full bg-secondary shadow-[0_0_12px_rgba(254,247,1,0.8)]" />
+                        <span className="text-[8px] md:text-xs font-semibold text-white/80 uppercase tracking-wide">Success</span>
+                      </div>
+                      <h3 className="text-2xl md:text-5xl lg:text-6xl font-black text-white mb-0.5 md:mb-2 drop-shadow-sm">
+                        90%
+                      </h3>
+                      <p className="text-[10px] md:text-base lg:text-lg text-white/95 font-medium leading-tight">Customer Satisfaction</p>
+                    </div>
+                  </div>
+
+                  {/* Stat Card 2 - Recognition with Liquid Glass */}
+                  <div className="group relative overflow-hidden rounded-xl lg:rounded-3xl p-2.5 md:p-5 lg:p-6 transition-all duration-500 hover:scale-[1.02]">
+                    {/* Liquid Glass Background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.15] via-white/[0.08] to-white/[0.05] backdrop-blur-3xl" />
+                    
+                    {/* Animated Liquid Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.2] via-transparent to-white/[0.1] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    
+                    {/* Shimmer Effect */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.2] to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                    </div>
+                    
+                    {/* Border with Gradient */}
+                    <div className="absolute inset-0 rounded-xl lg:rounded-3xl border border-white/[0.3] shadow-[0_8px_32px_0_rgba(255,255,255,0.18),inset_0_1px_0_0_rgba(255,255,255,0.25)]" />
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-1 md:gap-3 mb-1 md:mb-3">
+                        <div className="w-1 h-1 md:w-2 md:h-2 rounded-full bg-white shadow-[0_0_12px_rgba(255,255,255,0.8)]" />
+                        <span className="text-[8px] md:text-xs font-semibold text-white/80 uppercase tracking-wide">Awards</span>
+                      </div>
+                      <h3 className="text-2xl md:text-5xl lg:text-6xl font-black text-white mb-0.5 md:mb-2 drop-shadow-sm">
+                        240+
+                      </h3>
+                      <p className="text-[10px] md:text-base lg:text-lg text-white/95 font-medium leading-tight">Industry Awards</p>
+                    </div>
+                  </div>
+                  </div>
+                </FadeInRight>
+              </div>
+              
+              {/* Desktop: Camel Center */}
+              <div className="hidden lg:flex justify-center items-start order-none -mt-48">
+                <FadeInBottom>
+                  <div className="relative group">
+                    {/* Subtle Glow */}
+                    <div className="absolute inset-0 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-all duration-500" />
+                    
+                    <Image
+                      src="/designs/camel.webp"
+                      alt="255 Agency mascot - camel wearing sunglasses"
+                      width={600}
+                      height={900}
+                      className="relative z-30 h-[80vh] w-auto drop-shadow-2xl object-contain transition-transform duration-500 group-hover:scale-105"
+                      priority
+                    />
+                  </div>
+                </FadeInBottom>
+              </div>
+
+              {/* Desktop: Right Stats Column */}
+              <div className="hidden lg:block">
+                <FadeInRight>
+                  <div className="space-y-8">
+                    {/* Stat Card 1 - Desktop */}
+                    <div className="relative">
+                      {/* Floating Glasses - Top Center */}
+                      <div className="absolute -top-10 left-1/2 -translate-x-1/2 animate-float z-50" style={{animationDelay: '0.5s'}}>
+                        <Image
+                          src="/designs/glasses.webp"
+                          alt=""
+                          width={120}
+                          height={60}
+                          className="h-[80px] w-auto object-contain opacity-95 drop-shadow-xl"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      
+                      <div className="group relative overflow-hidden rounded-3xl p-6 transition-all duration-500 hover:scale-[1.02]">
+                      {/* Liquid Glass Background */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.15] via-white/[0.08] to-white/[0.05] backdrop-blur-3xl" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-secondary/[0.15] via-white/[0.1] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.2] to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                      </div>
+                      <div className="absolute inset-0 rounded-3xl border border-white/[0.3] shadow-[0_8px_32px_0_rgba(255,255,255,0.18),inset_0_1px_0_0_rgba(255,255,255,0.25)]" />
+                      <div className="relative z-10">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_12px_rgba(254,247,1,0.8)]" />
+                          <span className="text-xs font-semibold text-white/80 uppercase tracking-wider">Success Rate</span>
+                        </div>
+                        <h3 className="text-6xl font-black text-white mb-2 drop-shadow-sm">90%</h3>
+                        <p className="text-lg text-white/95 font-medium">Customer Satisfaction</p>
+                      </div>
+                      </div>
+                    </div>
+                    
+                    {/* Stat Card 2 - Desktop */}
+                    <div className="group relative overflow-hidden rounded-3xl p-6 transition-all duration-500 hover:scale-[1.02]">
+                      {/* Liquid Glass Background */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.15] via-white/[0.08] to-white/[0.05] backdrop-blur-3xl" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.2] via-transparent to-white/[0.1] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.2] to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                      </div>
+                      <div className="absolute inset-0 rounded-3xl border border-white/[0.3] shadow-[0_8px_32px_0_rgba(255,255,255,0.18),inset_0_1px_0_0_rgba(255,255,255,0.25)]" />
+                      <div className="relative z-10">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-2 h-2 rounded-full bg-white shadow-[0_0_12px_rgba(255,255,255,0.8)]" />
+                          <span className="text-xs font-semibold text-white/80 uppercase tracking-wider">Recognition</span>
+                        </div>
+                        <h3 className="text-6xl font-black text-white mb-2 drop-shadow-sm">240+</h3>
+                        <p className="text-lg text-white/95 font-medium">Industry Awards</p>
+                      </div>
+                    </div>
+                  </div>
+                </FadeInRight>
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeIn>
+
+      <FadeIn>
+        <section aria-labelledby="clients-heading" className="mt-8 md:mt-12 overflow-hidden">
+          <Container>
+            <h2 id="clients-heading" className="text-4xl md:text-5xl font-bold mb-8">They trust us</h2>
+          </Container>
+          <ClientsGrid />
+        </section>
+      </FadeIn>
+
+      <ScrollVideo />
+
+      <section className="relative min-h-[600px] lg:min-h-screen py-16 lg:py-32 flex items-center justify-center bg-primary" aria-label="Creative tagline">
+        <div className="relative w-full max-w-7xl mx-auto px-4">
+          {/* WHO WE ARE Section */}
+          <div className="hidden lg:block text-center mb-12 space-y-4">
+            <h2 className="text-3xl xl:text-4xl font-bold text-white uppercase tracking-wide">
+              WHO WE ARE
+            </h2>
+            <p className="text-base xl:text-lg text-white/60 max-w-4xl mx-auto" style={{ fontWeight: 400 }}>
+              WE ARE A DIGITAL-FOCUSED AMSTERDAM-BASED STUDIO. OUR MULTIDISCIPLINARY TEAM OF FREELANCERS AND AN A.. MULTIPLIES CREATIVE RESULTS AND HELPS BRANDS FLOURISH.
+            </p>
+          </div>
+
+          {/* Mobile/Tablet: Stacked Layout */}
+          <div className="lg:hidden text-center space-y-8">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-foreground">
+              WE MAKE YOUR AD AN AD
+            </h2>
+          </div>
+
+          {/* Desktop: Circular Layout */}
+          <div className="hidden lg:block relative h-[650px] xl:h-[750px]">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[500px] h-[500px] xl:w-[650px] xl:h-[650px] bg-foreground rounded-full flex justify-center items-center px-16 xl:px-24">
+              <p className="text-6xl xl:text-8xl leading-tight font-bold text-primary text-center">
+                MAKE YOUR ADS.
+              </p>
+              {/* Cursor arrow at bottom */}
+              <div className="absolute bottom-[40px] xl:bottom-[50px] left-1/2 -translate-x-1/2">
+                <img
+                  src="/Cursor C.webp"
+                  alt=""
+                  className="w-auto h-auto scale-[3]"
+                  aria-hidden="true"
+                />
+              </div>
+            </div>
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -ml-[250px] xl:-ml-[360px] w-[500px] h-[500px] xl:w-[650px] xl:h-[650px] rounded-full flex border-4 xl:border-8 border-foreground items-center px-16 xl:px-24" aria-hidden="true">
+              <p className="text-6xl xl:text-8xl w-fit leading-tight font-bold text-foreground text-left mb-[70px] xl:mb-[100px]">
+                WE
+              </p>
+            </div>
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ml-[250px] xl:ml-[360px] w-[500px] h-[500px] xl:w-[650px] xl:h-[650px] rounded-full flex flex-col justify-center items-end border-4 xl:border-8 border-foreground px-16 xl:px-24" aria-hidden="true">
+              <p className="text-6xl xl:text-8xl leading-tight font-bold text-foreground text-right">
+                AN
+              </p>
+              <p className="text-6xl xl:text-8xl leading-tight font-bold text-foreground text-right">
+                AD
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PortfolioSection />
+
+      <ServicesSection />
+
+      {/* <FeaturedWorks /> */}
+
+      <TeamSection />
+
+      <ContactUsSection />
+    </>
+  );
+}
