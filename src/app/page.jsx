@@ -335,9 +335,9 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn>
-        <section aria-labelledby="clients-heading" className="mt-8 md:mt-12 overflow-hidden">
+        <section aria-labelledby="clients-heading" className="mt-6 md:mt-8 overflow-hidden">
           <Container>
-            <h2 id="clients-heading" className="text-4xl md:text-5xl font-bold mb-8">They trust us</h2>
+            <h2 id="clients-heading" className="text-2xl md:text-3xl font-bold mb-4">They trust us</h2>
           </Container>
           <ClientsGrid />
         </section>

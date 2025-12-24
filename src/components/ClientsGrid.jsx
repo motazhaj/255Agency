@@ -11,7 +11,7 @@ const clientImages = [
 
 const ClientsGrid = () => {
   return (
-    <div className="w-full py-12 md:py-16">
+    <div className="w-full py-4 md:py-6">
       <div className="relative overflow-hidden w-full">
         <style jsx>{`
           @keyframes scroll {
@@ -42,7 +42,7 @@ const ClientsGrid = () => {
                 alt={`Clients ${index + 1}`}
                 width={800}
                 height={400}
-                className="h-[200px] md:h-[300px] w-auto object-contain"
+                className="h-[80px] md:h-[120px] w-auto object-contain"
                 loading="lazy"
                 quality={80}
               />
@@ -59,7 +59,7 @@ const ClientsGrid = () => {
                 alt={`Clients ${index + 1}`}
                 width={800}
                 height={400}
-                className="h-[200px] md:h-[300px] w-auto object-contain"
+                className="h-[80px] md:h-[120px] w-auto object-contain"
                 loading="lazy"
                 quality={80}
               />
@@ -68,7 +68,7 @@ const ClientsGrid = () => {
         </div>
       </div>
       
-      <p className="text-center text-sm md:text-base text-foreground/60 mt-8 px-4">
+      <p className="text-center text-xs md:text-sm text-foreground/60 mt-3 px-4">
         And many more trusted brands...
       </p>
     </div>
