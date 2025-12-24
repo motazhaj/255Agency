@@ -15,7 +15,7 @@ const ClientPortfolioPage = async ({ params }) => {
   }
   const files = fs.readdirSync(folderPath);
   const images = files
-    .filter((file) => /\.(png|jpe?g|svg)$/i.test(file))
+    .filter((file) => /\.(webp|png|jpe?g|svg)$/i.test(file))
     .map((file) => `/portfolio/${slug}/${file}`);
 
   return (
