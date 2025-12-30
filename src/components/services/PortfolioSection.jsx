@@ -20,16 +20,16 @@ const PortfolioSection = () => {
           </div>
         </div>
       </FadeIn>
-      <div className="w-full mb-24 md:mb-32">
+      <div className="w-full mb-16 md:mb-20">
         <PortfolioCarousel />
         <Container>
           <FadeInRight>
-            <p className="text-center text-lg md:text-xl my-8 md:my-10 text-foreground/95">See our full Portfolio!</p>
+            <p className="text-center text-lg md:text-xl mt-6 mb-4 text-foreground/95">See our full Portfolio!</p>
           </FadeInRight>
           <FadeInLeft>
             <LinkButtonFill href="/portfolio" className={"w-full sm:w-auto mx-auto"}>
               View Portfolio
-              <ArrowRightCircle size={20} className="ml-2" />
+              <ArrowRightCircle size={20} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
             </LinkButtonFill>
           </FadeInLeft>
         </Container>

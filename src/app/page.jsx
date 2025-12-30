@@ -59,10 +59,9 @@ export default function Home() {
             
             {/* Hero Title - Full Viewport Width */}
             <div className="text-center mb-0 mt-24 md:mt-8 lg:mt-12 relative z-[5] w-full px-4">
-              <FadeInRight>
-                <div className="relative inline-block lg:w-full">
-                  {/* Mobile Only: Left Floating Glasses */}
-                  <div className="lg:hidden absolute -left-12 sm:-left-16 md:-left-20 top-1/2 -translate-y-1/2 animate-float -z-10">
+              <div className="relative inline-block lg:w-full">
+                {/* Mobile Only: Left Floating Glasses */}
+                <div className="lg:hidden absolute -left-12 sm:-left-16 md:-left-20 top-1/2 -translate-y-1/2 animate-float z-10">
                     <Image
                       src="/designs/glasses.webp"
                       alt=""
@@ -70,36 +69,35 @@ export default function Home() {
                       height={60}
                       className="h-[40px] sm:h-[50px] md:h-[60px] w-auto object-contain opacity-90"
                       aria-hidden="true"
-                      loading="lazy"
+                      priority
                       quality={75}
                     />
-                  </div>
-                  
-                  <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem] 2xl:text-[12rem] font-extrabold tracking-[0.2em] w-full" style={{ fontWeight: 800 }}>
-                    <span className="inline-block text-white/80 drop-shadow-lg">
-                      CREATIVITY
-                    </span>
-                  </h1>
-                  
-                  {/* Mobile Only: Right Floating Glasses */}
-                  <div className="lg:hidden absolute -right-12 sm:-right-16 md:-right-20 top-1/2 -translate-y-1/2 animate-float -z-10" style={{animationDelay: '0.5s'}}>
-                    <Image
-                      src="/designs/glasses.webp"
-                      alt=""
-                      width={120}
-                      height={60}
-                      className="h-[40px] sm:h-[50px] md:h-[60px] w-auto object-contain opacity-90"
-                      aria-hidden="true"
-                      loading="lazy"
-                      quality={75}
-                    />
-                  </div>
                 </div>
-              </FadeInRight>
+                
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[10rem] 2xl:text-[12rem] font-extrabold tracking-[0.15em] w-full" style={{ fontWeight: 800 }}>
+                  <span className="inline-block text-white/80 drop-shadow-lg">
+                    CREATIVITY
+                  </span>
+                </h1>
+                
+                {/* Mobile Only: Right Floating Glasses */}
+                <div className="lg:hidden absolute -right-12 sm:-right-16 md:-right-20 top-1/2 -translate-y-1/2 animate-float z-10" style={{animationDelay: '0.5s'}}>
+                  <Image
+                    src="/designs/glasses.webp"
+                    alt=""
+                    width={120}
+                    height={60}
+                    className="h-[40px] sm:h-[50px] md:h-[60px] w-auto object-contain opacity-90"
+                    aria-hidden="true"
+                    priority
+                    quality={75}
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Mobile: Camel as Background - Layered */}
-            <FadeInBottom className="lg:hidden flex justify-center pointer-events-none relative z-[3]">
+            <div className="lg:hidden flex justify-center pointer-events-none relative z-[3] -mt-16">
               <div className="relative group">
                 <Image
                   src="/designs/camel.webp"
@@ -110,14 +108,13 @@ export default function Home() {
                   priority
                 />
               </div>
-            </FadeInBottom>
+            </div>
 
             {/* Responsive Grid Layout - Green Spot */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 max-w-7xl mx-auto w-full relative lg:static -mt-[45vh] lg:mt-0 px-3 lg:px-0 z-[10]">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 max-w-7xl mx-auto w-full relative lg:static -mt-[42vh] lg:mt-0 px-3 lg:px-0 z-[15]">
               
               {/* Left Card - Description with Liquid Glass Effect */}
-              <FadeInLeft>
-                <div className="relative">
+              <div className="relative">
                   {/* Floating Glasses - Top Right Corner - Desktop Only */}
                   <div className="hidden lg:block absolute -top-8 -right-8 md:-top-10 md:-right-10 lg:-top-12 lg:-right-12 animate-float z-50">
                     <Image
@@ -175,12 +172,10 @@ export default function Home() {
                   </div>
                   </div>
                 </div>
-              </FadeInLeft>
               
               {/* Mobile: 2-Column Stat Cards Grid - Now with z-index */}
               <div className="lg:hidden order-first relative z-20">
-                <FadeInRight>
-                  <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2">
                     {/* Stat Card 1 - Customer Satisfaction with Liquid Glass */}
                     <div className="group relative overflow-hidden rounded-xl lg:rounded-3xl p-2.5 md:p-5 lg:p-6 transition-all duration-500 hover:scale-[1.02]">
                     {/* Floating Glasses - Top Center - Desktop Only */}
@@ -248,14 +243,12 @@ export default function Home() {
                       <p className="text-[10px] md:text-base lg:text-lg text-white/95 font-medium leading-tight">Industry Awards</p>
                     </div>
                   </div>
-                  </div>
-                </FadeInRight>
+                </div>
               </div>
               
               {/* Desktop: Camel Center */}
               <div className="hidden lg:flex justify-center items-start order-none -mt-48">
-                <FadeInBottom>
-                  <div className="relative group">
+                <div className="relative group">
                     {/* Subtle Glow */}
                     <div className="absolute inset-0 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-all duration-500" />
                     
@@ -267,14 +260,12 @@ export default function Home() {
                       className="relative z-30 h-[80vh] w-auto drop-shadow-2xl object-contain transition-transform duration-500 group-hover:scale-105"
                       priority
                     />
-                  </div>
-                </FadeInBottom>
+                </div>
               </div>
 
               {/* Desktop: Right Stats Column */}
               <div className="hidden lg:block">
-                <FadeInRight>
-                  <div className="space-y-8">
+                <div className="space-y-8">
                     {/* Stat Card 1 - Desktop */}
                     <div className="relative">
                       {/* Floating Glasses - Top Center */}
@@ -327,7 +318,6 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </FadeInRight>
               </div>
             </div>
           </div>
@@ -335,15 +325,38 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn>
-        <section aria-labelledby="clients-heading" className="mt-6 md:mt-8 overflow-hidden">
-          <Container>
-            <h2 id="clients-heading" className="text-2xl md:text-3xl font-bold mb-4">They trust us</h2>
-          </Container>
-          <ClientsGrid />
+        <section aria-label="Our clients" className="w-screen h-screen overflow-hidden">
+          <div className="w-full h-full">
+            <Image
+              src="/designs/ourClients.webp"
+              alt="Our clients"
+              width={1920}
+              height={1080}
+              className="w-full h-full object-contain"
+              priority={false}
+              quality={80}
+            />
+          </div>
         </section>
       </FadeIn>
 
       <ScrollVideo />
+
+      <FadeIn>
+        <section aria-label="Our team" className="w-screen overflow-hidden">
+          <div className="w-full">
+            <Image
+              src="/designs/ourTeam.webp"
+              alt="Our team"
+              width={1920}
+              height={1080}
+              className="w-full h-auto object-cover"
+              priority={false}
+              quality={80}
+            />
+          </div>
+        </section>
+      </FadeIn>
 
       <section className="relative min-h-[600px] lg:min-h-screen py-16 lg:py-32 flex items-center justify-center bg-primary" aria-label="Creative tagline">
         <div className="relative w-full max-w-7xl mx-auto px-4">

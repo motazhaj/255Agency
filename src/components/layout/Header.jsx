@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import { useEffect, useState } from "react";
-import { Search, User } from "lucide-react";
+import { Search } from "lucide-react";
 
 import { navMenu1, navMenu2 } from "@/data/data";
 
@@ -34,21 +34,6 @@ const Navbar = () => {
       <div className="h-full flex items-center max-w-screen-xl mx-auto">
         <div className="w-full h-full flex items-center justify-between sm:px-6 px-2 gap-2 lg:gap-4">
           <div className="hidden lg:flex items-center flex-1 gap-6">
-            <Link
-              href="/account"
-              className={`p-2 rounded-full border-2 border-white hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
-                isHomePage || isScrolled
-                  ? "hover:bg-white/10 focus:ring-white"
-                  : "hover:bg-primary/10 focus:ring-primary"
-              }`}
-              aria-label="Account"
-            >
-              <User
-                className={`w-6 h-6 ${
-                  isHomePage || isScrolled ? "text-white" : "text-primary"
-                }`}
-              />
-            </Link>
             <NavMenu items={navMenu1} isScrolled={isScrolled} spread={false} />
           </div>
 
@@ -64,7 +49,7 @@ const Navbar = () => {
                 width={120}
                 height={120}
                 className={`mx-auto duration-200 ${
-                  isScrolled ? "size-[80px] lg:size-[100px]" : "mt-3 size-[100px] lg:size-[130px]"
+                  isScrolled ? "size-[120px] lg:size-[140px]" : "mt-3 size-[140px] lg:size-[180px]"
                 }`}
                 priority
               />
@@ -75,7 +60,7 @@ const Navbar = () => {
                 width={70}
                 height={70}
                 className={`mx-auto duration-200 ${
-                  isScrolled ? "size-[80px] lg:size-[100px]" : "mt-3 size-[100px] lg:size-[130px]"
+                  isScrolled ? "size-[120px] lg:size-[140px]" : "mt-3 size-[140px] lg:size-[180px]"
                 }`}
                 priority
               />

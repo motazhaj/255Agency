@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import Container from "@/components/layout/Container";
 import PortfolioItemCard from "@/components/services/PortfolioItemCard";
+import PDFFlipBook from "@/components/PDFFlipBook";
 import { slugify } from "@/logic/helpers";
 
 const portfolioItems = [
@@ -30,6 +31,8 @@ const PortfolioPage = () => {
     <section className="flex flex-col gap-8 pt-32 bg-foreground text-primary">
       <Container className={"mb-32"}>
       <h1 className="text-4xl font-bold mb-12">255 Choosen Works!</h1>
+
+        <PDFFlipBook pdfUrl="/company-profile-mobile.pdf" />
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 flex-wrap justify-center">
           {portfolioItems.map((item, index) => (

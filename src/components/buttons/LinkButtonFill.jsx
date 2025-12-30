@@ -8,7 +8,7 @@ const LinkButtonFill = ({ href, children, blank, className }) => {
       {...(blank ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={
         className +
-        " px-6 py-3 flex gap-4 justify-center text-base md:text-xl font-bold items-center rounded-xl text-foreground bg-background transition-all duration-300 drop-shadow-md hover:scale-105 hover:bg-background/80 focus:outline-none focus:ring-4 focus:ring-primary/50 focus:scale-105 active:scale-95"
+        " px-8 py-4 flex gap-3 justify-center text-base md:text-lg font-semibold items-center rounded-full bg-white text-primary shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-gradient-to-r hover:from-white hover:to-gray-50 focus:outline-none focus:ring-4 focus:ring-white/50 active:scale-95 relative overflow-hidden group"
       }
     >
       {children}
