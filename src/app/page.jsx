@@ -416,6 +416,22 @@ export default function Home() {
 
       {/* <FeaturedWorks /> */}
 
+      <section className="py-16 lg:py-24 bg-foreground">
+        <Container>
+          <div className="max-w-6xl mx-auto">
+            <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-2xl">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/sOq2Yt83gE0?autoplay=1&mute=1&loop=1&playlist=sOq2Yt83gE0&controls=0&showinfo=0&rel=0&modestbranding=1"
+                title="YouTube video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <TeamSection />
 
       <ContactUsSection />

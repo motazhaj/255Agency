@@ -208,4 +208,9 @@ export const contactInfo = [
     address: "Muruj District - Imam Saud bin Abdulaziz bin Mohammed Road, Riyadh, Saudi Arabia",
     phone: "+966 59 981 7490",
   },
+  {
+    name: "255 Houston",
+    address: "Houston, Texas, United States",
+    phone: "+1 (424) 800-2025",
+  },
 ];

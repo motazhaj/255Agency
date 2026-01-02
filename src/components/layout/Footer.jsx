@@ -134,14 +134,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-white/80 flex-shrink-0 mt-0.5" />
                 <span className="text-white/80 text-sm font-light">
-                  Nirlaba Creative Studio 88<br />
-                  Future Lane
+                  Houston, Texas
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-white/80 flex-shrink-0" />
-                <a href="mailto:hello@nirlaba.studio" className="text-white/80 text-sm font-light hover:text-white transition-colors">
-                  hello@nirlaba.studio
+                <a href="mailto:255@255.ps" className="text-white/80 text-sm font-light hover:text-white transition-colors">
+                  255@255.ps
                 </a>
               </li>
               <li className="flex items-center gap-3">
