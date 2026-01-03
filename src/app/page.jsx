@@ -113,8 +113,8 @@ export default function Home() {
             {/* Responsive Grid Layout - Green Spot */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 max-w-7xl mx-auto w-full relative lg:static -mt-[42vh] lg:mt-0 px-3 lg:px-0 z-[15]">
               
-              {/* Left Card - Description with Liquid Glass Effect */}
-              <div className="relative">
+              {/* Left Card - Description with Liquid Glass Effect - Hidden on Mobile */}
+              <div className="relative hidden lg:block">
                   {/* Floating Glasses - Top Right Corner - Desktop Only */}
                   <div className="hidden lg:block absolute -top-8 -right-8 md:-top-10 md:-right-10 lg:-top-12 lg:-right-12 animate-float z-50">
                     <Image
@@ -157,7 +157,7 @@ export default function Home() {
               
               {/* Mobile: 2-Column Stat Cards Grid - Now with z-index */}
               <div className="lg:hidden order-first relative z-20">
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2 mb-4">
                     {/* Stat Card 1 - Customer Satisfaction with Liquid Glass */}
                     <div className="group relative overflow-hidden rounded-xl lg:rounded-3xl p-2.5 md:p-5 lg:p-6 transition-all duration-500 hover:scale-[1.02]">
                     {/* Floating Glasses - Top Center - Desktop Only */}
@@ -198,7 +198,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Stat Card 2 - Recognition with Liquid Glass */}
+                  {/* Stat Card 2 - Industry Awards - Now visible on mobile */}
                   <div className="group relative overflow-hidden rounded-xl lg:rounded-3xl p-2.5 md:p-5 lg:p-6 transition-all duration-500 hover:scale-[1.02]">
                     {/* Liquid Glass Background */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/[0.15] via-white/[0.08] to-white/[0.05] backdrop-blur-3xl" />
@@ -225,6 +225,20 @@ export default function Home() {
                       <p className="text-[10px] md:text-base lg:text-lg text-white/95 font-medium leading-tight">Industry Awards</p>
                     </div>
                   </div>
+                </div>
+
+                {/* Mobile CTA Buttons - Below the cards */}
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <LinkButtonFill href="/contact" className="px-6 py-2.5 whitespace-nowrap bg-white/95 text-primary shadow-lg relative overflow-hidden group/btn hover:bg-gradient-to-r hover:from-primary hover:to-[#ff5722] hover:text-white hover:shadow-[0_0_30px_rgba(255,87,34,0.6)] hover:scale-105 transition-all duration-500">
+                    <span className="relative z-10 transition-transform duration-500 group-hover/btn:scale-110">Contact Us</span>
+                    <ArrowRightCircle size={16} className="ml-2 relative z-10 transition-all duration-500 group-hover/btn:translate-x-2 group-hover/btn:rotate-[360deg]" />
+                    <span className="absolute inset-0 bg-gradient-to-r from-primary via-[#ff5722] to-primary opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-xl"></span>
+                  </LinkButtonFill>
+                  <LinkButtonFill href="/#services" className="px-6 py-2.5 whitespace-nowrap bg-white/[0.25] border border-white/50 backdrop-blur-xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3)] relative overflow-hidden group/services hover:bg-white/90 hover:border-white hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] hover:scale-105 transition-all duration-500 text-white">
+                    <span className="relative z-10 transition-all duration-500 group-hover/services:tracking-wider group-hover/services:text-primary text-white">Our Services</span>
+                    <ArrowRightCircle size={16} className="ml-2 relative z-10 transition-all duration-500 group-hover/services:translate-x-1 group-hover/services:scale-125 text-white" />
+                    <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 -translate-x-full group-hover/services:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                  </LinkButtonFill>
                 </div>
               </div>
               

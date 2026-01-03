@@ -251,10 +251,15 @@ const FishTankAnimation = ({ topElementId = 'social-media-text', bottomElementId
         }
 
         // Add new ball from top of screen
+        // Smaller balls on mobile (width < 768px)
+        const isMobile = window.innerWidth < 768;
+        const baseRadius = isMobile ? 12 : 20;
+        const randomRadius = isMobile ? 8 : 15;
+        
         const ball = new Ball(
-          Math.random() * canvas.width,
+          Math.random() * canvasDisplayWidth,
           -50, // Start above the screen
-          20 + Math.random() * 15,
+          baseRadius + Math.random() * randomRadius,
           socialMediaIcons[Math.floor(Math.random() * socialMediaIcons.length)]
         );
         ballsRef.current.push(ball);
