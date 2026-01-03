@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import emailjs from '@emailjs/browser';
 import Loading from "./Loading";
+import { contactInfo } from "@/data/data";
+import Image from "next/image";
 
 const ContactUsSection = () => {
   const router = useRouter();
@@ -127,6 +129,60 @@ const ContactUsSection = () => {
         <h2 className="text-white text-3xl md:text-4xl font-bold mb-8">
           Find Us Here
         </h2>
+
+        {/* Location Flag Cards - 4 cards in a row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {contactInfo.map((location, index) => {
+            const flagVideos = [
+              '/flags/PS.mp4', // Nablus - Palestine
+              '/flags/PS.mp4', // Nazareth - Palestine
+              '/flags/saudi.mp4', // Riyadh - Saudi Arabia
+              '/flags/USA.mp4' // Houston - USA
+            ];
+            
+            // Palestine (0,1) and USA (3) should be left-aligned, Saudi (2) centered
+            const flagPosition = (index === 0 || index === 1 || index === 3) ? 'left center' : 'center';
+            
+            return (
+              <div
+                key={index}
+                className="relative rounded-xl p-3 flex flex-col justify-center overflow-hidden h-[170px]"
+              >
+                {/* Flag Video Background */}
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover z-0"
+                  style={{
+                    objectPosition: flagPosition,
+                    filter: 'brightness(0.7)'
+                  }}
+                >
+                  <source src={flagVideos[index]} type="video/mp4" />
+                </video>
+                
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-black/40 z-10" />
+                
+                {/* Content */}
+                <div className="relative z-20 p-4">
+                  <Image
+                    src="/255-logo-white.svg"
+                    alt="255 Logo"
+                    width={60}
+                    height={30}
+                    className="mb-1.5"
+                  />
+                  <p className="text-lg text-white/95 drop-shadow-md leading-snug whitespace-pre-line font-medium">
+                    {location.address}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
         {/* Two column layout - 2/3 map, 1/3 form */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

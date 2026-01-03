@@ -143,32 +143,14 @@ export default function Home() {
                   <div className="absolute inset-0 rounded-xl md:rounded-3xl border border-white/[0.3] shadow-[0_8px_32px_0_rgba(255,255,255,0.18),inset_0_1px_0_0_rgba(255,255,255,0.25)]" />
                   
                   <div className="relative z-10">
-                    <div className="inline-flex items-center justify-center w-9 h-9 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-gradient-to-br from-white/[0.25] to-white/[0.15] backdrop-blur-xl mb-2 md:mb-4 shadow-[inset_0_2px_4px_0_rgba(255,255,255,0.4),0_4px_12px_rgba(0,0,0,0.1)]">
-                      <svg className="w-4 h-4 md:w-6 md:h-6 text-white drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
+                    <div className="flex items-center gap-1 md:gap-3 mb-1 md:mb-3">
+                      <div className="w-1 h-1 md:w-2 md:h-2 rounded-full bg-white shadow-[0_0_12px_rgba(255,255,255,0.8)]" />
+                      <span className="text-[8px] md:text-xs font-semibold text-white/80 uppercase tracking-wide">Awards</span>
                     </div>
-                    
-                    <h2 className="text-base md:text-xl lg:text-2xl font-bold mb-1.5 md:mb-3 text-white drop-shadow-sm">
-                      Interactive Digital Installations
-                    </h2>
-                    
-                    <p className="text-[11px] md:text-sm lg:text-base text-white/95 leading-relaxed mb-3 md:mb-6 text-justify">
-                      Our team of forward-thinking designers, strategists, and innovators is dedicated to transforming ideas into exceptional experiences.
-                    </p>
-                    
-                    <div className="flex flex-col xl:flex-row gap-2">
-                      <LinkButtonFill href="/#services" className="w-full xl:w-auto bg-white/95 text-primary shadow-lg relative overflow-hidden group/btn hover:bg-gradient-to-r hover:from-primary hover:to-[#ff5722] hover:text-white hover:shadow-[0_0_30px_rgba(255,87,34,0.6)] hover:scale-110 transition-all duration-500">
-                        <span className="relative z-10 transition-transform duration-500 group-hover/btn:scale-110">Services</span>
-                        <ArrowRightCircle size={16} className="ml-2 relative z-10 transition-all duration-500 group-hover/btn:translate-x-2 group-hover/btn:rotate-[360deg]" />
-                        <span className="absolute inset-0 bg-gradient-to-r from-primary via-[#ff5722] to-primary opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-xl"></span>
-                      </LinkButtonFill>
-                      <LinkButtonFill href="/contact" className="w-full xl:w-auto bg-white/[0.25] border border-white/50 backdrop-blur-xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3)] relative overflow-hidden group/contact hover:bg-white/90 hover:border-white hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] hover:scale-105 transition-all duration-500">
-                        <span className="relative z-10 transition-all duration-500 group-hover/contact:tracking-wider group-hover/contact:text-primary">Contact</span>
-                        <ArrowRightCircle size={16} className="ml-2 relative z-10 transition-all duration-500 group-hover/contact:translate-x-1 group-hover/contact:scale-125" />
-                        <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 -translate-x-full group-hover/contact:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                      </LinkButtonFill>
-                    </div>
+                    <h3 className="text-2xl md:text-5xl lg:text-6xl font-black text-white mb-0.5 md:mb-2 drop-shadow-sm">
+                      240+
+                    </h3>
+                    <p className="text-[10px] md:text-base lg:text-lg text-white/95 font-medium leading-tight">Industry Awards</p>
                   </div>
                   </div>
                 </div>
@@ -247,7 +229,7 @@ export default function Home() {
               </div>
               
               {/* Desktop: Camel Center */}
-              <div className="hidden lg:flex justify-center items-start order-none -mt-48">
+              <div className="hidden lg:flex flex-col justify-center items-center order-none -mt-48">
                 <div className="relative group">
                     {/* Subtle Glow */}
                     <div className="absolute inset-0 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-all duration-500" />
@@ -260,6 +242,20 @@ export default function Home() {
                       className="relative z-30 h-[80vh] w-auto drop-shadow-2xl object-contain transition-transform duration-500 group-hover:scale-105"
                       priority
                     />
+                    
+                    {/* CTA Buttons - Positioned on camel's foot */}
+                    <div className="absolute bottom-[8%] left-1/2 -translate-x-1/2 flex gap-4 z-40">
+                      <LinkButtonFill href="/contact" className="px-8 py-2.5 whitespace-nowrap bg-white/95 text-primary shadow-lg relative overflow-hidden group/btn hover:bg-gradient-to-r hover:from-primary hover:to-[#ff5722] hover:text-white hover:shadow-[0_0_30px_rgba(255,87,34,0.6)] hover:scale-110 transition-all duration-500">
+                        <span className="relative z-10 transition-transform duration-500 group-hover/btn:scale-110">Contact Us</span>
+                        <ArrowRightCircle size={16} className="ml-2 relative z-10 transition-all duration-500 group-hover/btn:translate-x-2 group-hover/btn:rotate-[360deg]" />
+                        <span className="absolute inset-0 bg-gradient-to-r from-primary via-[#ff5722] to-primary opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-xl"></span>
+                      </LinkButtonFill>
+                      <LinkButtonFill href="/#services" className="px-8 py-2.5 whitespace-nowrap bg-white/[0.25] border border-white/50 backdrop-blur-xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3)] relative overflow-hidden group/services hover:bg-white/90 hover:border-white hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] hover:scale-105 transition-all duration-500 text-white">
+                        <span className="relative z-10 transition-all duration-500 group-hover/services:tracking-wider group-hover/services:text-primary text-white">Our Services</span>
+                        <ArrowRightCircle size={16} className="ml-2 relative z-10 transition-all duration-500 group-hover/services:translate-x-1 group-hover/services:scale-125 text-white" />
+                        <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 -translate-x-full group-hover/services:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                      </LinkButtonFill>
+                    </div>
                 </div>
               </div>
 
@@ -298,62 +294,9 @@ export default function Home() {
                       </div>
                       </div>
                     </div>
-                    
-                    {/* Stat Card 2 - Desktop */}
-                    <div className="group relative overflow-hidden rounded-3xl p-6 transition-all duration-500 hover:scale-[1.02]">
-                      {/* Liquid Glass Background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.15] via-white/[0.08] to-white/[0.05] backdrop-blur-3xl" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.2] via-transparent to-white/[0.1] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.2] to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                      </div>
-                      <div className="absolute inset-0 rounded-3xl border border-white/[0.3] shadow-[0_8px_32px_0_rgba(255,255,255,0.18),inset_0_1px_0_0_rgba(255,255,255,0.25)]" />
-                      <div className="relative z-10">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-2 h-2 rounded-full bg-white shadow-[0_0_12px_rgba(255,255,255,0.8)]" />
-                          <span className="text-xs font-semibold text-white/80 uppercase tracking-wider">Recognition</span>
-                        </div>
-                        <h3 className="text-6xl font-black text-white mb-2 drop-shadow-sm">240+</h3>
-                        <p className="text-lg text-white/95 font-medium">Industry Awards</p>
-                      </div>
-                    </div>
                   </div>
               </div>
             </div>
-          </div>
-        </section>
-      </FadeIn>
-
-      <FadeIn>
-        <section aria-label="Our clients" className="w-screen h-screen overflow-hidden">
-          <div className="w-full h-full">
-            <Image
-              src="/designs/ourClients.webp"
-              alt="Our clients"
-              width={1920}
-              height={1080}
-              className="w-full h-full object-contain"
-              priority={false}
-              quality={80}
-            />
-          </div>
-        </section>
-      </FadeIn>
-
-      <ScrollVideo />
-
-      <FadeIn>
-        <section aria-label="Our team" className="w-screen overflow-hidden">
-          <div className="w-full">
-            <Image
-              src="/designs/ourTeam.webp"
-              alt="Our team"
-              width={1920}
-              height={1080}
-              className="w-full h-auto object-cover"
-              priority={false}
-              quality={80}
-            />
           </div>
         </section>
       </FadeIn>
@@ -410,9 +353,43 @@ export default function Home() {
         </div>
       </section>
 
-      <PortfolioSection />
+      <ScrollVideo />
+
+      <FadeIn>
+        <section aria-label="Our team" className="w-screen overflow-hidden">
+          <div className="w-full">
+            <Image
+              src="/designs/ourTeam.webp"
+              alt="Our team"
+              width={1920}
+              height={1080}
+              className="w-full h-auto object-cover"
+              priority={false}
+              quality={80}
+            />
+          </div>
+        </section>
+      </FadeIn>
 
       <ServicesSection />
+
+      <PortfolioSection />
+
+      <FadeIn>
+        <section aria-label="Our clients" className="w-screen h-screen overflow-hidden">
+          <div className="w-full h-full">
+            <Image
+              src="/designs/ourClients.webp"
+              alt="Our clients"
+              width={1920}
+              height={1080}
+              className="w-full h-full object-contain"
+              priority={false}
+              quality={80}
+            />
+          </div>
+        </section>
+      </FadeIn>
 
       {/* <FeaturedWorks /> */}
 

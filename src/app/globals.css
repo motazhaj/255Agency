@@ -95,3 +95,23 @@ body {
   transform: translateX(-50%);
   top: 1rem;
 }
+
+/* Waving flag animation for location cards */
+@keyframes wave {
+  0%, 100% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+    filter: brightness(0.7);
+  }
+  25% {
+    transform: perspective(1000px) rotateY(-2deg) rotateX(1deg);
+    filter: brightness(0.75);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(-1deg);
+    filter: brightness(0.7);
+  }
+  75% {
+    transform: perspective(1000px) rotateY(2deg) rotateX(1deg);
+    filter: brightness(0.75);
+  }
+}

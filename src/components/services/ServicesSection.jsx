@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import FishTankAnimation from "./FishTankAnimation";
 
 const ServicesSection = () => {
   const services = [
@@ -13,6 +14,7 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="relative bg-primary text-white py-16 px-4 overflow-hidden">
+      <FishTankAnimation topElementId="social-media-text" bottomElementId="events-text" />
       {/* Large "SERVICES" background text - spans full width */}
       <div className="absolute top-0 left-0 right-0 pointer-events-none text-center">
         <h2 className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[14rem] font-black text-white/20 leading-none tracking-[0.05em] sm:tracking-[0.08em] md:tracking-[0.1em] lg:tracking-[0.12em]">
@@ -43,11 +45,18 @@ const ServicesSection = () => {
               )}
               
               {/* Service Name */}
-              <h3 className={`font-black text-white tracking-tight leading-tight transition-all duration-300 group-hover:text-white/90 whitespace-nowrap ${
-                index === 0 
-                  ? 'text-5xl md:text-7xl lg:text-8xl xl:text-9xl' 
-                  : 'text-4xl md:text-6xl lg:text-7xl xl:text-8xl'
-              }`}>
+              <h3 
+                id={index === 0 ? 'social-media-text' : index === 5 ? 'events-text' : undefined}
+                className={`font-black text-white tracking-tight leading-tight transition-all duration-300 group-hover:text-white/90 whitespace-nowrap ${
+                  index === 0 
+                    ? 'text-5xl md:text-7xl lg:text-8xl xl:text-9xl' 
+                    : 'text-4xl md:text-6xl lg:text-7xl xl:text-8xl'
+                }`}
+                style={{
+                  WebkitTextStroke: '2px black',
+                  paintOrder: 'stroke fill'
+                }}
+              >
                 {service.name}
               </h3>
               

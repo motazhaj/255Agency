@@ -26,7 +26,66 @@ const ContactPage = () => {
       <section className="py-20">
         <Container>
           <section className="mb-12">
-            <ContactForm />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+              {/* Left: Contact Form */}
+              <div>
+                <ContactForm />
+              </div>
+              
+              {/* Right: Location Cards in 2x2 grid */}
+              <div className="grid grid-cols-2 gap-3 auto-rows-fr">
+                {contactInfo.map((location, index) => {
+                  const flagVideos = [
+                    '/flags/PS.mp4', // Nablus - Palestine
+                    '/flags/PS.mp4', // Nazareth - Palestine
+                    '/flags/saudi.mp4', // Riyadh - Saudi Arabia
+                    '/flags/USA.mp4' // Houston - USA
+                  ];
+                  
+                  // Palestine (0,1) and USA (3) should be left-aligned, Saudi (2) centered
+                  const flagPosition = (index === 0 || index === 1 || index === 3) ? 'left center' : 'center';
+                  
+                  return (
+                    <div
+                      key={index}
+                      className="relative rounded-xl p-3 flex flex-col justify-center overflow-hidden h-[170px]"
+                    >
+                      {/* Flag Video Background */}
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover z-0"
+                        style={{
+                          objectPosition: flagPosition,
+                          filter: 'brightness(0.7)'
+                        }}
+                      >
+                        <source src={flagVideos[index]} type="video/mp4" />
+                      </video>
+                      
+                      {/* Dark overlay for text readability */}
+                      <div className="absolute inset-0 bg-black/40 z-10" />
+                      
+                      {/* Content */}
+                      <div className="relative z-20 p-4">
+                        <Image
+                          src="/255-logo-white.svg"
+                          alt="255 Logo"
+                          width={60}
+                          height={30}
+                          className="mb-1.5"
+                        />
+                        <p className="text-lg text-white/95 drop-shadow-md leading-snug whitespace-pre-line font-medium">
+                          {location.address}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </section>
           
           <section className="bg-gradient-to-t rounded-2xl bg-primary text-foreground mb-4 p-4 drop-shadow-lg">
@@ -68,21 +127,6 @@ const ContactPage = () => {
                   title="Google Map Location"
                 ></iframe>
               </div>
-            </div>
-          </section>
-          <section className="text-foreground drop-shadow-lg">
-            <div className="flex flex-col lg:flex-row justify-start gap-4">
-              {contactInfo.map((location, index) => (
-                <div
-                  key={index}
-                  className="lg:w-1/2 bg-primary text-foreground rounded-2xl p-8 flex flex-col gap-4"
-                >
-                  <h2 className="text-4xl font-bold text-foreground">
-                    {location.name}
-                  </h2>
-                  <p className="text-xl opacity-80">{location.address}</p>
-                </div>
-              ))}
             </div>
           </section>
         </Container>

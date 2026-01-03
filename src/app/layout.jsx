@@ -46,6 +46,13 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/255-logo.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Preload social media icons for fish tank animation */}
+        <link rel="preload" href="/social-icons/facebook.png" as="image" />
+        <link rel="preload" href="/social-icons/instagram.png" as="image" />
+        <link rel="preload" href="/social-icons/youtube.png" as="image" />
+        <link rel="preload" href="/social-icons/x.png" as="image" />
+        <link rel="preload" href="/social-icons/tiktok.png" as="image" />
+        <link rel="preload" href="/social-icons/linkedin.png" as="image" />
       </head>
       <body className={`${madaniArabic.className} ${madaniArabic.variable} relative w-full flex flex-col justify-between min-h-screen overflow-x-hidden`}>
         <CustomCursor />

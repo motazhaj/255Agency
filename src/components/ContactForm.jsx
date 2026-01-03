@@ -105,98 +105,96 @@ const ContactForm = () => {
       </h2>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label
-              htmlFor="firstName"
-              className="block text-primary text-lg font-medium mb-2"
-            >
-              first name*
-            </label>
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              placeholder="first name"
-              className={`w-full px-6 py-4 rounded-lg border-2 bg-transparent text-background placeholder:text-background/40 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 ${
-                errors.firstName ? "border-red-500" : "border-primary"
-              }`}
-            />
-            {errors.firstName && (
-              <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
-            )}
-          </div>
+        <div>
+          <label
+            htmlFor="firstName"
+            className="block text-primary text-lg font-medium mb-2"
+          >
+            first name*
+          </label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+            placeholder="first name"
+            className={`w-full px-6 py-4 rounded-lg border-2 bg-transparent text-background placeholder:text-background/40 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 ${
+              errors.firstName ? "border-red-500" : "border-primary"
+            }`}
+          />
+          {errors.firstName && (
+            <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
+          )}
+        </div>
 
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-primary text-lg font-medium mb-2"
-            >
-              Email*
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email"
-              className={`w-full px-6 py-4 rounded-lg border-2 bg-transparent text-background placeholder:text-background/40 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 ${
-                errors.email ? "border-red-500" : "border-primary"
-              }`}
-            />
-            {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-            )}
-          </div>
+        <div>
+          <label
+            htmlFor="lastName"
+            className="block text-primary text-lg font-medium mb-2"
+          >
+            last name*
+          </label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+            placeholder="last name"
+            className={`w-full px-6 py-4 rounded-lg border-2 bg-transparent text-background placeholder:text-background/40 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 ${
+              errors.lastName ? "border-red-500" : "border-primary"
+            }`}
+          />
+          {errors.lastName && (
+            <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
+          )}
+        </div>
 
-          <div>
-            <label
-              htmlFor="lastName"
-              className="block text-primary text-lg font-medium mb-2"
-            >
-              last name*
-            </label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              placeholder="last name"
-              className={`w-full px-6 py-4 rounded-lg border-2 bg-transparent text-background placeholder:text-background/40 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 ${
-                errors.lastName ? "border-red-500" : "border-primary"
-              }`}
-            />
-            {errors.lastName && (
-              <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
-            )}
-          </div>
+        <div>
+          <label
+            htmlFor="email"
+            className="block text-primary text-lg font-medium mb-2"
+          >
+            Email*
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+            className={`w-full px-6 py-4 rounded-lg border-2 bg-transparent text-background placeholder:text-background/40 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 ${
+              errors.email ? "border-red-500" : "border-primary"
+            }`}
+          />
+          {errors.email && (
+            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+          )}
+        </div>
 
-          <div>
-            <label
-              htmlFor="phone"
-              className="block text-primary text-lg font-medium mb-2"
-            >
-              Phone*
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="phone"
-              className={`w-full px-6 py-4 rounded-lg border-2 bg-transparent text-background placeholder:text-background/40 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 ${
-                errors.phone ? "border-red-500" : "border-primary"
-              }`}
-            />
-            {errors.phone && (
-              <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
-            )}
-          </div>
+        <div>
+          <label
+            htmlFor="phone"
+            className="block text-primary text-lg font-medium mb-2"
+          >
+            Phone*
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="phone"
+            className={`w-full px-6 py-4 rounded-lg border-2 bg-transparent text-background placeholder:text-background/40 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 ${
+              errors.phone ? "border-red-500" : "border-primary"
+            }`}
+          />
+          {errors.phone && (
+            <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+          )}
         </div>
 
         <button

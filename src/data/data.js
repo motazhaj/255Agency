@@ -191,7 +191,7 @@ export const teamData = [
 export const contactInfo = [
   {
     name: "255 Nablus",
-    address: "Al basateen st. - saad al deen building - 2nd floor 970 Nablus, Palestine",
+    address: "Al basateen st.\nsaad al deen building\n2nd floor\nNablus, Palestine",
     phone: "+972 56-625-5255",
     email: "255@255.ps",
     whatsappLink: "https://wa.me/972566255255",
@@ -200,17 +200,17 @@ export const contactInfo = [
   },
   {
     name: "255 Nazareth",
-    address: "Mitham Mul Harim, Nof HaGalil 1754200, Israel",
+    address: "Mitham Mul Harim\nNof HaGalil 1754200\nIsrael",
     phone: "+972 0544681684",
   },
   {
     name: "255 Riyadh",
-    address: "Muruj District - Imam Saud bin Abdulaziz bin Mohammed Road, Riyadh, Saudi Arabia",
+    address: "Muruj District\nImam Saud bin Abdulaziz\nbin Mohammed Road\nRiyadh, Saudi Arabia",
     phone: "+966 59 981 7490",
   },
   {
     name: "255 Houston",
-    address: "Houston, Texas, United States",
+    address: "Houston, Texas\nUnited States",
     phone: "+1 (424) 800-2025",
   },
 ];
