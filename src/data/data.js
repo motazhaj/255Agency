@@ -145,7 +145,7 @@ export const teamData = [
     nameKey: "teamaAmer",
     role: "Operation Officer",
     roleKey: "operationOfficer",
-    image: "/Staff/Teama.png",
+    image: "/Staff/Teama.webp",
     linkedin: "https://www.linkedin.com/",
   },
   {
