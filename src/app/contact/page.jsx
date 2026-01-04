@@ -35,35 +35,28 @@ const ContactPage = () => {
               {/* Right: Location Cards in 2x2 grid */}
               <div className="grid grid-cols-2 gap-3 auto-rows-fr">
                 {contactInfo.map((location, index) => {
-                  const flagVideos = [
-                    '/flags/PS.mp4', // Nablus - Palestine
-                    '/flags/PS.mp4', // Nazareth - Palestine
-                    '/flags/saudi.mp4', // Riyadh - Saudi Arabia
-                    '/flags/USA.mp4' // Houston - USA
+                  const cityImages = [
+                    '/cities/nablus.jpg', // Nablus
+                    '/cities/nazareth.jpg', // Nazareth
+                    '/cities/riyadh.jpg', // Riyadh
+                    '/cities/houston.jpg' // Houston/Texas
                   ];
-                  
-                  // Palestine (0,1) and USA (3) should be left-aligned, Saudi (2) centered
-                  const flagPosition = (index === 0 || index === 1 || index === 3) ? 'left center' : 'center';
                   
                   return (
                     <div
                       key={index}
                       className="relative rounded-xl p-3 flex flex-col justify-center overflow-hidden h-[170px]"
                     >
-                      {/* Flag Video Background */}
-                      <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="absolute inset-0 w-full h-full object-cover z-0"
+                      {/* City View Image Background */}
+                      <Image
+                        src={cityImages[index]}
+                        alt={`${location.address} city view`}
+                        fill
+                        className="object-cover z-0"
                         style={{
-                          objectPosition: flagPosition,
                           filter: 'brightness(0.7)'
                         }}
-                      >
-                        <source src={flagVideos[index]} type="video/mp4" />
-                      </video>
+                      />
                       
                       {/* Dark overlay for text readability */}
                       <div className="absolute inset-0 bg-black/40 z-10" />

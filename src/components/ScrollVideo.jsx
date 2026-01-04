@@ -16,7 +16,7 @@ export default function ScrollVideo() {
 	useEffect(() => {
 		if (typeof window !== 'undefined' && imagesRef.current.length === 0) {
 			const loadedImages = [];
-			for (let i = 1; i <= 4350; i++) {
+			for (let i = 1; i <= 1794; i++) {
 				const img = new Image();
 				img.src = `/images/${i}.webp`;
 				loadedImages.push(img);
@@ -36,7 +36,7 @@ export default function ScrollVideo() {
 		}
 	}, []);
 
-	const currentIndex = useTransform(scrollYProgress, [0, 1], [1, 4350]);
+	const currentIndex = useTransform(scrollYProgress, [0, 1], [1, 1794]);
 
 	useMotionValueEvent(currentIndex, 'change', (latest) => {
 		render(Math.round(latest));
@@ -50,7 +50,7 @@ export default function ScrollVideo() {
 		<div
 			ref={containerRef}
 			style={{
-				height: '4350vh',
+				height: '1794vh',
 				position: 'relative',
 				width: '100vw',
 			}}
@@ -68,8 +68,8 @@ export default function ScrollVideo() {
 				}}
 			>
 				<canvas 
-					width={1000} 
-					height={563} 
+					width={1920} 
+					height={1080} 
 					ref={canvasRef}
 					style={{
 						width: '100%',
