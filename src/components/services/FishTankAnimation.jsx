@@ -233,7 +233,7 @@ const FishTankAnimation = ({ topElementId = 'social-media-text', bottomElementId
 
       // Create balls gradually
       let ballCount = 0;
-      const maxBalls = 150;
+      const maxBalls = 40;
       const fillInterval = setInterval(() => {
         if (ballCount >= maxBalls) {
           clearInterval(fillInterval);

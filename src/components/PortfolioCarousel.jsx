@@ -103,7 +103,7 @@ const PortfolioCarousel = () => {
     setIsAnimating(true);
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % portfolioItems.length);
-    setTimeout(() => setIsAnimating(false), shouldReduceMotion ? 300 : 600);
+    setTimeout(() => setIsAnimating(false), shouldReduceMotion ? 200 : 400);
   }, [isAnimating, shouldReduceMotion]);
 
   const handlePrev = useCallback(() => {
@@ -111,7 +111,7 @@ const PortfolioCarousel = () => {
     setIsAnimating(true);
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + portfolioItems.length) % portfolioItems.length);
-    setTimeout(() => setIsAnimating(false), shouldReduceMotion ? 300 : 600);
+    setTimeout(() => setIsAnimating(false), shouldReduceMotion ? 200 : 400);
   }, [isAnimating, shouldReduceMotion]);
 
   const goToSlide = useCallback((index) => {
@@ -119,7 +119,7 @@ const PortfolioCarousel = () => {
     setIsAnimating(true);
     setDirection(index > currentIndex ? 1 : -1);
     setCurrentIndex(index);
-    setTimeout(() => setIsAnimating(false), shouldReduceMotion ? 300 : 600);
+    setTimeout(() => setIsAnimating(false), shouldReduceMotion ? 200 : 400);
   }, [isAnimating, currentIndex, shouldReduceMotion]);
 
   const startAutoplay = useCallback(() => {
@@ -128,7 +128,7 @@ const PortfolioCarousel = () => {
       if (!isPaused) {
         handleNext();
       }
-    }, 5000);
+    }, 3000);
   }, [handleNext, isPaused]);
 
   const stopAutoplay = useCallback(() => {
@@ -330,13 +330,13 @@ const PortfolioCarousel = () => {
                   zIndex: position.zIndex,
                 }}
                 transition={shouldReduceMotion ? {
-                  duration: 0.3,
+                  duration: 0.2,
                   ease: "easeInOut"
                 } : {
                   type: "spring",
-                  stiffness: 100,
-                  damping: 25,
-                  mass: 0.8,
+                  stiffness: 150,
+                  damping: 20,
+                  mass: 0.6,
                   velocity: direction * 2,
                 }}
                 style={{
@@ -374,13 +374,13 @@ const PortfolioCarousel = () => {
                           : 'shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)]'
                       }`}
                       whileHover={isCenter && !shouldReduceMotion ? { scale: 1.03, rotate: 1 } : {}}
-                      transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                      transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
                     >
                       <div className="relative w-full h-[380px] md:h-[450px] lg:h-[500px]">
                         <motion.div
                           initial={{ scale: 1 }}
                           whileHover={isCenter && !shouldReduceMotion ? { scale: 1.08 } : {}}
-                          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+                          transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
                           className="w-full h-full"
                         >
                           <Image
@@ -401,7 +401,7 @@ const PortfolioCarousel = () => {
                               className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"
                               initial={{ opacity: 0 }}
                               whileHover={{ opacity: 1 }}
-                              transition={{ duration: 0.4, ease: "easeOut" }}
+                              transition={{ duration: 0.3, ease: "easeOut" }}
                             />
                             
                             {/* Animated Border Glow */}
@@ -409,7 +409,7 @@ const PortfolioCarousel = () => {
                               className="absolute inset-0"
                               initial={{ opacity: 0 }}
                               whileHover={{ opacity: 1 }}
-                              transition={{ duration: 0.4, ease: "easeOut" }}
+                              transition={{ duration: 0.3, ease: "easeOut" }}
                             >
                               <div className="absolute inset-0 rounded-3xl border-2 border-primary/50 animate-pulse" />
                             </motion.div>
@@ -422,7 +422,7 @@ const PortfolioCarousel = () => {
                           className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-white"
                           initial={{ y: '100%' }}
                           whileHover={{ y: 0 }}
-                          transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                          transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
                         >
                           <div className="flex justify-between items-center gap-4">
                             <h3 className="text-xl md:text-2xl lg:text-3xl font-bold">{item.title}</h3>
@@ -443,7 +443,7 @@ const PortfolioCarousel = () => {
                       className="mt-6 text-center w-full"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: 0.15, ease: [0.4, 0, 0.2, 1] }}
+                      transition={{ duration: 0.3, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
                     >
                       <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white drop-shadow-lg transition-colors duration-300 whitespace-pre-line">
                         {item.title}
