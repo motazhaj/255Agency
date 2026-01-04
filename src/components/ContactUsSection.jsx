@@ -6,8 +6,10 @@ import emailjs from '@emailjs/browser';
 import Loading from "./Loading";
 import { contactInfo } from "@/data/data";
 import Image from "next/image";
+import { useTranslation } from "@/contexts/LanguageContext";
 
 const ContactUsSection = () => {
+  const t = useTranslation();
   const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: "",
@@ -120,14 +122,14 @@ const ContactUsSection = () => {
       {/* Large "LET'S" background text */}
       <div className="absolute top-0 left-0 right-0 pointer-events-none">
         <h1 className="text-[12rem] md:text-[20rem] lg:text-[25rem] font-black text-white/10 leading-none tracking-tight">
-          LET'S
+          {t.contact.letsConnect || "LET'S"}
         </h1>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Find Us Here heading */}
         <h2 className="text-white text-3xl md:text-4xl font-bold mb-8">
-          Find Us Here
+          {t.contact.findUsHere || "Find Us Here"}
         </h2>
 
         {/* Location City View Cards - 4 cards in a row */}
@@ -193,7 +195,7 @@ const ContactUsSection = () => {
           {/* Right: Contact Form */}
           <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-xl">
             <h3 className="text-primary text-2xl md:text-3xl font-bold mb-6">
-              connect with us
+              {t.contact.connectWithUs || "connect with us"}
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -203,7 +205,7 @@ const ContactUsSection = () => {
                   htmlFor="firstName"
                   className="block text-primary text-base font-medium mb-2"
                 >
-                  first name*
+                  {t.contact.firstName || "first name"}*
                 </label>
                 <input
                   type="text"
@@ -211,7 +213,7 @@ const ContactUsSection = () => {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  placeholder="first name"
+                  placeholder={t.contact.firstName || "first name"}
                   className={`w-full px-4 py-3 rounded-lg border-2 bg-white text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary transition-all ${
                     errors.firstName ? "border-red-500" : "border-primary"
                   }`}
@@ -227,7 +229,7 @@ const ContactUsSection = () => {
                   htmlFor="lastName"
                   className="block text-primary text-base font-medium mb-2"
                 >
-                  last name*
+                  {t.contact.lastName || "last name"}*
                 </label>
                 <input
                   type="text"
@@ -235,7 +237,7 @@ const ContactUsSection = () => {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-                  placeholder="last name"
+                  placeholder={t.contact.lastName || "last name"}
                   className={`w-full px-4 py-3 rounded-lg border-2 bg-white text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary transition-all ${
                     errors.lastName ? "border-red-500" : "border-primary"
                   }`}
@@ -251,7 +253,7 @@ const ContactUsSection = () => {
                   htmlFor="email"
                   className="block text-primary text-base font-medium mb-2"
                 >
-                  Email*
+                  {t.contact.email}*
                 </label>
                 <input
                   type="email"
@@ -259,7 +261,7 @@ const ContactUsSection = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Email"
+                  placeholder={t.contact.email}
                   className={`w-full px-4 py-3 rounded-lg border-2 bg-white text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary transition-all ${
                     errors.email ? "border-red-500" : "border-primary"
                   }`}
@@ -275,7 +277,7 @@ const ContactUsSection = () => {
                   htmlFor="phone"
                   className="block text-primary text-base font-medium mb-2"
                 >
-                  Phone*
+                  {t.contact.phone}*
                 </label>
                 <input
                   type="tel"
@@ -283,7 +285,7 @@ const ContactUsSection = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="phone"
+                  placeholder={t.contact.phone}
                   className={`w-full px-4 py-3 rounded-lg border-2 bg-white text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary transition-all ${
                     errors.phone ? "border-red-500" : "border-primary"
                   }`}
@@ -299,7 +301,7 @@ const ContactUsSection = () => {
                 disabled={isSubmitting}
                 className="w-full bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? "Sending..." : "Submit"}
+                {isSubmitting ? t.contact.sending : t.contact.send}
               </button>
 
               {/* Error Message */}

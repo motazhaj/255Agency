@@ -8,34 +8,50 @@ export default function CustomCursor() {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
-    // Detect touch device
     setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
     
-    // Don't initialize cursor on touch devices
     if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
       return;
     }
+
+    let rafId = null;
+    let lastX = 0;
+    let lastY = 0;
+
     const updateCursor = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      
-      const target = e.target;
-      setIsPointer(
-        window.getComputedStyle(target).cursor === 'pointer' ||
-        target.tagName === 'A' ||
-        target.tagName === 'BUTTON' ||
-        target.closest('a') ||
-        target.closest('button')
-      );
+      lastX = e.clientX;
+      lastY = e.clientY;
+
+      if (rafId === null) {
+        rafId = requestAnimationFrame(() => {
+          setPosition({ x: lastX, y: lastY });
+          
+          const target = document.elementFromPoint(lastX, lastY);
+          if (target) {
+            setIsPointer(
+              window.getComputedStyle(target).cursor === 'pointer' ||
+              target.tagName === 'A' ||
+              target.tagName === 'BUTTON' ||
+              target.closest('a') ||
+              target.closest('button')
+            );
+          }
+          rafId = null;
+        });
+      }
     };
 
     const handleMouseEnter = () => setIsVisible(true);
     const handleMouseLeave = () => setIsVisible(false);
 
-    document.addEventListener('mousemove', updateCursor);
+    document.addEventListener('mousemove', updateCursor, { passive: true });
     document.addEventListener('mouseenter', handleMouseEnter);
     document.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+      }
       document.removeEventListener('mousemove', updateCursor);
       document.removeEventListener('mouseenter', handleMouseEnter);
       document.removeEventListener('mouseleave', handleMouseLeave);

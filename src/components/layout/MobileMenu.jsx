@@ -5,8 +5,11 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Search } from "lucide-react";
 import { motion } from "framer-motion";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useTranslation } from "@/contexts/LanguageContext";
 
 const MobileMenu = ({items, isHomePage, searchQuery, setSearchQuery, isScrolled}) => {
+  const t = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -74,7 +77,7 @@ const MobileMenu = ({items, isHomePage, searchQuery, setSearchQuery, isScrolled}
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="I'am looking for..."
+                  placeholder={t.common.search || "Search..."}
                   className="w-full px-5 py-3 pr-12 rounded-full border-2 border-primary bg-transparent text-primary placeholder:text-primary/60 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"
                 />
                 <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-primary" />
@@ -97,6 +100,8 @@ const MobileMenu = ({items, isHomePage, searchQuery, setSearchQuery, isScrolled}
                 ))}
               </ul>
             </div>
+            
+            <LanguageSwitcher isMobile={true} />
           </nav>
         </motion.div>
       </div>

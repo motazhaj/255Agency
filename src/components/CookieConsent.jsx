@@ -35,7 +35,7 @@ const CookieConsent = () => {
   if (!showBanner) return null;
 
   return (
-    <div className={`fixed bottom-0 left-0 right-0 z-[200] bg-primary/80 text-white rounded-t-[3rem] border border-white border-b-0 transition-transform duration-500 ease-out ${
+    <div className={`fixed bottom-0 left-0 right-0 z-[200] bg-[#36454F]/80 text-white rounded-t-[3rem] border border-white border-b-0 transition-transform duration-500 ease-out ${
       isVisible ? "translate-y-0" : "translate-y-full"
     }`}>
       <div className="relative overflow-hidden rounded-t-[3rem]">

@@ -4,8 +4,11 @@ import Image from "next/image";
 import { teamData } from "@/data/data";
 import FadeInBottom from "./animations/FadeInBottom";
 import { useState, useRef } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TeamSection = () => {
+  const { t, currentLanguage } = useLanguage();
+  const isRTL = currentLanguage === 'ar';
   const [currentSlide, setCurrentSlide] = useState(0);
   const scrollContainerRef = useRef(null);
 
@@ -44,10 +47,10 @@ const TeamSection = () => {
         <FadeInBottom>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              OUR TEAM
+              {t.team.title}
             </h2>
             <p className="text-foreground/60 text-lg md:text-xl max-w-2xl mx-auto">
-              Meet the creative minds behind 255 Agency
+              {t.team.subtitle || "Meet the creative minds behind 255 Agency"}
             </p>
           </div>
         </FadeInBottom>
@@ -124,10 +127,10 @@ const TeamSection = () => {
                     
                     <div className="p-6 relative bg-white">
                       <h3 className="text-xl md:text-2xl font-bold mb-2 text-primary">
-                        {member.name}
+                        {member.nameKey && t.team.members?.[member.nameKey] ? t.team.members[member.nameKey] : member.name}
                       </h3>
                       <p className="text-primary/80 text-sm md:text-base">
-                        {member.role}
+                        {member.roleKey && t.team.roles?.[member.roleKey] ? t.team.roles[member.roleKey] : member.role}
                       </p>
                     </div>
 
@@ -135,8 +138,8 @@ const TeamSection = () => {
                       href={member.linkedin || "#"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary/90 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
-                      aria-label={`${member.name} LinkedIn profile`}
+                      className={`absolute bottom-4 w-10 h-10 rounded-full bg-primary/90 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 ${isRTL ? 'left-4' : 'right-4'}`}
+                      aria-label={`${member.nameKey && t.team.members?.[member.nameKey] ? t.team.members[member.nameKey] : member.name} LinkedIn profile`}
                     >
                       <svg
                         className="w-5 h-5 text-white"
@@ -190,10 +193,10 @@ const TeamSection = () => {
                   
                   <div className="p-6 relative bg-white">
                     <h3 className="text-xl md:text-2xl font-bold mb-2 text-primary">
-                      {member.name}
+                      {member.nameKey && t.team.members?.[member.nameKey] ? t.team.members[member.nameKey] : member.name}
                     </h3>
                     <p className="text-primary/80 text-sm md:text-base">
-                      {member.role}
+                      {member.roleKey && t.team.roles?.[member.roleKey] ? t.team.roles[member.roleKey] : member.role}
                     </p>
                   </div>
 
@@ -201,8 +204,8 @@ const TeamSection = () => {
                     href={member.linkedin || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary/90 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 z-10"
-                    aria-label={`${member.name} LinkedIn profile`}
+                    className={`absolute bottom-4 w-10 h-10 rounded-full bg-primary/90 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 z-10 ${isRTL ? 'left-4' : 'right-4'}`}
+                    aria-label={`${member.nameKey && t.team.members?.[member.nameKey] ? t.team.members[member.nameKey] : member.name} LinkedIn profile`}
                   >
                     <svg
                       className="w-5 h-5 text-white"
