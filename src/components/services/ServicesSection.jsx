@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import FishTankAnimation from "./FishTankAnimation";
 
 const ServicesSection = () => {
@@ -26,16 +25,15 @@ const ServicesSection = () => {
         {/* Services List */}
         <div className="-space-y-2 md:-space-y-4 mb-16">
           {services.map((service, index) => (
-            <Link
+            <div
               key={index}
-              href={`/services/${service.slug}`}
-              className={`group relative flex items-center transition-all duration-300 hover:scale-105 cursor-pointer ${
+              className={`group relative flex items-center ${
                 service.align === 'center' ? 'justify-center' : 'justify-start'
               } ${index === 4 ? 'pl-[15%] md:pl-[20%] lg:pl-[25%]' : ''}`}
             >
               {/* Icon on the left for Social Media */}
               {service.icon && index === 0 && (
-                <div className="absolute left-8 md:left-12 lg:left-16 -top-12 sm:-top-14 md:top-1/2 md:-translate-y-1/2 w-10 h-10 md:w-14 md:h-14 transition-transform duration-300 group-hover:scale-110">
+                <div className="absolute left-8 md:left-12 lg:left-16 -top-12 sm:-top-14 md:top-1/2 md:-translate-y-1/2 w-10 h-10 md:w-14 md:h-14">
                   <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" 
                     alt="Adobe Illustrator"
@@ -47,7 +45,7 @@ const ServicesSection = () => {
               {/* Service Name */}
               <h3 
                 id={index === 0 ? 'social-media-text' : index === 5 ? 'events-text' : undefined}
-                className={`font-black text-white tracking-tight leading-tight transition-all duration-300 group-hover:text-white/90 whitespace-nowrap ${
+                className={`font-black text-white tracking-tight leading-tight whitespace-nowrap ${
                   index === 0 
                     ? 'text-5xl md:text-7xl lg:text-8xl xl:text-9xl' 
                     : 'text-4xl md:text-6xl lg:text-7xl xl:text-8xl'
@@ -62,7 +60,7 @@ const ServicesSection = () => {
               
               {/* Icon on the right for Marketing */}
               {service.icon && index === 3 && (
-                <div className="absolute right-8 md:right-12 lg:right-16 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 transition-transform duration-300 group-hover:scale-110">
+                <div className="absolute right-8 md:right-12 lg:right-16 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14">
                   <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" 
                     alt="Adobe Photoshop"
@@ -70,7 +68,7 @@ const ServicesSection = () => {
                   />
                 </div>
               )}
-            </Link>
+            </div>
           ))}
         </div>
 
