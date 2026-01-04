@@ -139,9 +139,9 @@ export const teamData = [
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "oroba ali",
-    role: "general manager",
-    image: "/Staff/oroba.webp",
+    name: "Teama Amer",
+    role: "Business Developer",
+    image: "/Staff/teama.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
