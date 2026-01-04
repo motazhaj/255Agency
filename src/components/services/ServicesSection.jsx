@@ -1,14 +1,18 @@
+'use client';
 import React from "react";
 import FishTankAnimation from "./FishTankAnimation";
+import { useTranslation } from "@/contexts/LanguageContext";
 
 const ServicesSection = () => {
+  const t = useTranslation();
+  
   const services = [
-    { name: "SOCIAL MEDIA", icon: "Ai", align: "center", slug: "social-media" },
-    { name: "VIDEO PRODUCTION", icon: null, align: "center", slug: "video-production" },
-    { name: "PRINTABLES", icon: null, align: "center", slug: "printables" },
-    { name: "MARKETING", icon: "Ps", align: "center", slug: "marketing-campaigns" },
-    { name: "SOCIAL", icon: null, align: "left", slug: "social-media" },
-    { name: "EVENTS", icon: null, align: "center", slug: "events" },
+    { name: t.services.socialMedia, icon: "Ai", align: "center", slug: "social-media" },
+    { name: t.services.videoProduction, icon: null, align: "center", slug: "video-production" },
+    { name: t.services.printables, icon: null, align: "center", slug: "printables" },
+    { name: t.services.marketing, icon: "Ps", align: "center", slug: "marketing-campaigns" },
+    { name: t.services.socialShort || "SOCIAL", icon: null, align: "left", slug: "social-media" },
+    { name: t.services.events, icon: null, align: "center", slug: "events" },
   ];
 
   return (
@@ -17,7 +21,7 @@ const ServicesSection = () => {
       {/* Large "SERVICES" background text - spans full width */}
       <div className="absolute top-0 left-0 right-0 pointer-events-none text-center">
         <h2 className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[14rem] font-black text-white/20 leading-none tracking-[0.05em] sm:tracking-[0.08em] md:tracking-[0.1em] lg:tracking-[0.12em]">
-          SERVICES
+          {t.services.title}
         </h2>
       </div>
 
@@ -75,10 +79,10 @@ const ServicesSection = () => {
         {/* Bottom Tagline */}
         <div className="text-center space-y-4 mt-12">
           <h4 className="text-xl md:text-2xl lg:text-3xl font-bold uppercase tracking-wide">
-            CAPTURE, COMMUNICATE, AND CONNECT.
+            {t.services.tagline || "CAPTURE, COMMUNICATE, AND CONNECT."}
           </h4>
           <p className="text-white/90 text-xs md:text-sm lg:text-base max-w-4xl mx-auto leading-relaxed uppercase" style={{ fontFamily: 'MadaniArabic-Light, sans-serif', fontWeight: 300 }}>
-            We create impactful graphics that convey your brand's message and resonate with your audience, from logos to marketing materials.
+            {t.services.description || "We create impactful graphics that convey your brand's message and resonate with your audience, from logos to marketing materials."}
           </p>
         </div>
       </div>
