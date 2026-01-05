@@ -17,7 +17,14 @@ export default function Home() {
   const isRTL = currentLanguage === 'ar';
   return (
     <>
-      <SplashCursor />
+      <SplashCursor 
+        DENSITY_DISSIPATION={8}
+        VELOCITY_DISSIPATION={5}
+        PRESSURE={0.02}
+        CURL={1}
+        SPLAT_RADIUS={0.1}
+        SPLAT_FORCE={1500}
+      />
       <FadeIn>
         <section className="relative min-h-screen overflow-visible lg:overflow-hidden">
           {/* Modern Gradient Background */}

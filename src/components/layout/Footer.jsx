@@ -18,9 +18,9 @@ const Footer = () => {
       <div className="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-12">
           {/* Left: Logo and Description */}
-          <div className="lg:col-span-1">
+          <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <Image
                 src="/255-logo-white.svg"

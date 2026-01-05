@@ -6,9 +6,9 @@ import { translations } from "@/translations";
 const LanguageContext = createContext();
 
 export const languages = {
-  en: { code: "en", name: "English", nativeName: "English", flag: "🇺🇸", dir: "ltr" },
-  ar: { code: "ar", name: "Arabic", nativeName: "العربية", flag: "🇵🇸", dir: "rtl" },
-  es: { code: "es", name: "Spanish", nativeName: "Español", flag: "🇪🇸", dir: "ltr" },
+  en: { code: "en", name: "English", nativeName: "English", dir: "ltr" },
+  ar: { code: "ar", name: "Arabic", nativeName: "العربية", dir: "rtl" },
+  es: { code: "es", name: "Spanish", nativeName: "Español", dir: "ltr" },
 };
 
 export function LanguageProvider({ children }) {

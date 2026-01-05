@@ -72,6 +72,10 @@ const MobileMenu = ({items, isHomePage, searchQuery, setSearchQuery, isScrolled}
           </div>
           <nav>
             <div className="flex flex-col items-center gap-4 py-8 w-full px-8">
+              <div className="w-full mb-4">
+                <LanguageSwitcher isMobile={true} />
+              </div>
+              
               <div className="relative w-full mb-4">
                 <input
                   type="text"
@@ -100,8 +104,6 @@ const MobileMenu = ({items, isHomePage, searchQuery, setSearchQuery, isScrolled}
                 ))}
               </ul>
             </div>
-            
-            <LanguageSwitcher isMobile={true} />
           </nav>
         </motion.div>
       </div>
