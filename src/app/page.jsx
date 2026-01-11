@@ -11,10 +11,34 @@ import SplashCursor from "@/components/SplashCursor";
 import Image from "next/image";
 import { ArrowRightCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useRef, useEffect } from "react";
 
 export default function Home() {
   const { t, currentLanguage } = useLanguage();
   const isRTL = currentLanguage === 'ar';
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(video);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
   return (
     <>
       <SplashCursor 
@@ -374,6 +398,22 @@ export default function Home() {
       </section>
 
       <ScrollVideo />
+
+      <section className="relative w-screen min-h-screen bg-black flex items-center justify-center py-16">
+        <div className="w-full max-w-7xl mx-auto px-4">
+          <video
+            ref={videoRef}
+            className="w-full h-auto rounded-2xl shadow-2xl"
+            muted
+            loop
+            playsInline
+            onLoadedMetadata={(e) => e.target.playbackRate = 1.5}
+          >
+            <source src="/section3-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
 
       <FadeIn>
         <section aria-label="Our team" className="w-screen overflow-hidden">
